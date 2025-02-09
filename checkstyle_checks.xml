@@ -194,8 +194,5 @@
       <property name="checkFormat" value="$1"/>
       <!-- The check is suppressed in the next line of code after the comment -->
       <property name="influenceFormat" value="1"/>
-    </module>  
-  <module name="Indentation">
-    </module>
   </module>
 </module>

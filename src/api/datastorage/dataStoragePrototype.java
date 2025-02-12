@@ -3,7 +3,7 @@ package datastore;
 import project.annotations.ProcessAPIPrototype;
 
 @ProcessAPIPrototype
-public class dataStoragePrototype {
+public class DataStoragePrototype {
 
 	public void prototype(DataStorage dataStorage) {
 		// write user input data

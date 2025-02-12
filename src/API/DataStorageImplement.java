@@ -10,7 +10,7 @@ public class DataStorageImplement implements DataStorage{
 	}
 	
 	@Override
-	public void writeOutput(String destination, String data) {
+	public void writeOutput(String destination, int computeResult) {
 		//write the computed result to a file
 	}
 	//comment

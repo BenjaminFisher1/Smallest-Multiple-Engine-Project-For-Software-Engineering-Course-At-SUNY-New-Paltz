@@ -3,7 +3,7 @@ package datastore;
 import project.annotations.ProcessAPI;
 
 @ProcessAPI
-public interface DataStorage {
+public interface DataStorage{
 
 	DataStoreInput storeData(DataToStore dataToStore);
 

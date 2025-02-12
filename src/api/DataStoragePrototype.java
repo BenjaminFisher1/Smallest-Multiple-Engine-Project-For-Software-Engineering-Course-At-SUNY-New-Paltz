@@ -1,7 +1,7 @@
 package api;
 
 import project.annotations.ProcessAPIPrototype;
-import DataStoreRequest;
+
 
 public class DataStoragePrototype{
 	public void prototype(DataStorage dataStorage) {

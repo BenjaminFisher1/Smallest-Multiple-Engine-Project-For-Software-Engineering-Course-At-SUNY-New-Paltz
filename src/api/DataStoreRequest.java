@@ -1,5 +1,5 @@
 package api;
 
-public interface DataStoreRequest{
+public class DataStoreRequest{
 	//request to store this data using DataStoreInput interface
 }

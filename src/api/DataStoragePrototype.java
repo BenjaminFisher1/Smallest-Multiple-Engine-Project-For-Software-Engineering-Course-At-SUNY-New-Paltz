@@ -2,6 +2,7 @@ package api;
 
 import project.annotations.ProcessAPIPrototype;
 
+
 public class DataStorageProtoype{
 	public void prototype(DataStorage dataStorage) {
 		

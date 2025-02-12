@@ -1,5 +1,7 @@
 package api;
 
+import project.annotations.NetworkAPI;
+
 @ProcessAPI
 public interface DataStorage{
 	String readUserInput(String source);

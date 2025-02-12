@@ -1,5 +1,7 @@
 package api;
 
+import project.annotations.NetworkAPIPrototype;
+
 @ProcessAPIPrototype
 public class DataStorageImplement implements DataStorage{
 	

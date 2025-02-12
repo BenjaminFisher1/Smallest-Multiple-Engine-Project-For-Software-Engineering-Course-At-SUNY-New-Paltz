@@ -9,8 +9,8 @@ public class ComputeEngineAPIImpl implements ComputeEngineAPI {
     public ComputeAPI computeAPI = tempComputeAPI ;
 
     @Override
-    public int processJob(int n) {
-        return computeAPI.computeSmallestMultiple(n);
+    public void processJob(int n) {
+//        return computeAPI.computeSmallestMultiple(n);
     }
 }
 //comment

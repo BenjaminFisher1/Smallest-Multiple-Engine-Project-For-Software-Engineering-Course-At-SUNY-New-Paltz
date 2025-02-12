@@ -1,4 +1,4 @@
-package api;
+package datastorage;
 
 import project.annotations.NetworkAPIPrototype;
 
@@ -7,7 +7,7 @@ public class DataStorageImplement implements DataStorage{
 	
 	
 	public int readUserInput(String source) {
-		//read in the user input!!!!!
+		//read in the user input from the source!!!!!
 		return 1; //example output
 	}
 	

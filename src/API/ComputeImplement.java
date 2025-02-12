@@ -10,4 +10,5 @@ public interface ComputeImplement {
         return 1;   //placeholder
     }
 
+    int processJobs(int n);
 }

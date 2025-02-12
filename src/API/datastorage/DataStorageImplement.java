@@ -3,7 +3,7 @@ package datastorage;
 import project.annotations.NetworkAPIPrototype;
 
 @ProcessAPIPrototype
-public class DataStorageImplement implements DataStorage{
+public class abstract DataStorageImplement implements DataStorage{
 	
 	
 	public int readUserInput(String source) {

@@ -5,12 +5,11 @@ import project.annotations.ConceptualAPIPrototype;
 
 @ConceptualAPIPrototype
 public class ComputeEngineAPIImpl implements ComputeEngineAPI {
-	ComputeAPIImpl tempComputeAPI = new ComputeAPIImpl();
+	ComputeUserInput generalInput = new ComputeUserInput();
     public ComputeAPI computeAPI = tempComputeAPI ;
 
-    @Override
-    public void processJob(int n) {
-//        return computeAPI.computeSmallestMultiple(n);
-    }
+    ProcessJob computeJob = computeAPI.computeUponThis(generalInput);
+    
+	}
 }
 //comment

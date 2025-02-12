@@ -1,6 +1,6 @@
 package datastorage;
 
-import project.annotations.NetworkAPIPrototype;
+import project.annotations.ProcessAPIPrototype;
 
 @ProcessAPIPrototype
 public class DataStorageImplement{
@@ -11,6 +11,7 @@ public class DataStorageImplement{
 		
 		//retrieve the output 
 		DataFetchResult computedData = dataStorage.retrieveData(userInput);
+		
 	}
 	
 }

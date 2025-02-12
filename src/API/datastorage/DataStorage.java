@@ -1,6 +1,6 @@
 package datastorage;
 
-import project.annotations.NetworkAPI;
+import project.annotations.ProcessAPI;
 
 @ProcessAPI
 public interface DataStorage{

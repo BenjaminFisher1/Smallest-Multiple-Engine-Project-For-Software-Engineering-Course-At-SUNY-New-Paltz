@@ -1,9 +1,9 @@
 package api;
 
 
-import project.annotations.ConceptualAPIPrototype;
+//import project.annotations.ConceptualAPIPrototype;
 
-@ConceptualAPIPrototype
+//@ConceptualAPIPrototype
 public class ComputeEngineAPIImpl{
 	public void prototype(ComputeEngineAPI computeEngineApi) {
 		ComputeUserInput generalInput = new ComputeUserInput();

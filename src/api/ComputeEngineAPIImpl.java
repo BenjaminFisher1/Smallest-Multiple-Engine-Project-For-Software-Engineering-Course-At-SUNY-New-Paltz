@@ -5,11 +5,13 @@ import project.annotations.ConceptualAPIPrototype;
 
 @ConceptualAPIPrototype
 public class ComputeEngineAPIImpl implements ComputeEngineAPI {
-	ComputeUserInput generalInput = new ComputeUserInput();
-    public ComputeAPI computeAPI = tempComputeAPI ;
+	public void prototype(ComputeEngineAPI computeEngineApi) {
+		ComputeUserInput generalInput = new ComputeUserInput();
 
-    ProcessJob computeJob = computeAPI.computeUponThis(generalInput);
-    
+	    ProcessJob computeJob = computeAPI.computeUponThis(generalInput);
+	    
+	}
+	
 }
 
 //comment

@@ -10,6 +10,6 @@ public class DataStoragePrototype {
 		DataStoreInput userInput = dataStore.storeData(new DataToStore());
 		
 		// retrieve the computed result from user input
-		DataLookupResult computedData = dataStorage.retrieveData(userInput);
+		DataLookupComputedResult computedData = dataStorage.retrieveData(userInput);
 	}
 }

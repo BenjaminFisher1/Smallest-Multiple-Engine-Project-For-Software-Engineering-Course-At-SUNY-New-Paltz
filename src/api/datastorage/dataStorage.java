@@ -5,8 +5,8 @@ import project.annotations.ProcessAPI;
 @ProcessAPI
 public interface DataStorage {
 
-	DataStoreKey storeData(DataToStore dataToStore);
+	DataStoreInput storeData(DataToStore dataToStore);
 
-	DataLookupResult retrieveData(DataStoreInput userInput);
+	DataLookupComputedResult retrieveData(DataStoreInput userInput);
 
 }

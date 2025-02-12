@@ -5,7 +5,8 @@ import project.annotations.ConceptualAPIPrototype;
 
 @ConceptualAPIPrototype
 public class ComputeEngineAPIImpl implements ComputeEngineAPI {
-    private ComputeAPI computeAPI = new ComputeAPIImpl();
+	ComputeAPIImpl tempComputeAPI = new ComputeAPIImpl();
+    private ComputeAPI computeAPI = ;
 
     @Override
     public int processJob(int n) {

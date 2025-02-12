@@ -1,5 +1,5 @@
 package api;
 
-interface ComputeUserInput {
+public class ComputeUserInput {
 
 }

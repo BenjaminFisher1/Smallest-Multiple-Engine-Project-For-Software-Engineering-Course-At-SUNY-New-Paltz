@@ -1,10 +1,10 @@
 package api;
 
-import static org.mockito.Mockito;
+import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.mock;
-import static org.junit.Test;
+import  org.junit.Test;
 
 public class TestDataStorage{
 	

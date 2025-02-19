@@ -7,7 +7,7 @@ import java.util.List;
 //
 //import api.InMemoryInputConfig;
 //import api.InMemoryOutputConfig;
-import api.DataStorage;
+//import api.DataStorage;
 //import api.DataStorageImpl;
 import api.ComputeEngineAPI;
 import api.DataStoreRequest;
@@ -29,7 +29,7 @@ public class IntegrationTest {
 
         // initialize components
         EmptyDataStorage dataStorage = new EmptyDataStorage();
-        EmptyComputeEngine computeAPI = new EmptyComputeEngine();
+//        EmptyComputeEngine computeAPI = new EmptyComputeEngine();
 
         // store input data
         DataStoreRequest request = new DataStoreRequest();

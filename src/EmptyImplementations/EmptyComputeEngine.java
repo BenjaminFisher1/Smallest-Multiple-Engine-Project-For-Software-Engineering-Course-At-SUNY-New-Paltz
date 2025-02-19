@@ -6,9 +6,9 @@ public class EmptyComputeEngine extends ComputeEngineAPI{
 		
 	    public ProcessJob processTheJob(ComputeUserInput generalInput) {
 	    	
-	    	ProcessJob placeholderProcessJob = new ProcessJob();
+//	    	ProcessJob placeholderProcessJob = new ProcessJob();
 	    	
-	    	return placeholderProcessJob;
+	    	return new ProcessJOb(){};
 	    	
 	}
 }

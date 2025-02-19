@@ -1,29 +1,26 @@
 package api;
-import static org.mockito.Mockito.*;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*; // Import missing Mockito methods
 
-import api.ComputeEngineAPI;
-import api.ComputeUserInput;
-import api.ProcessJob;
+public class TestComputeEngineAPI {
 
-public class TestComputeEngineAPI extends ComputeEngineAPI{
     @Test
-    public void testComputeEngineBehvior(){
+    public void testComputeEngineBehavior() {  // Fixed typo in method name
+        // Arrange
         ComputeEngineAPI engine = mock(ComputeEngineAPI.class);
         ComputeUserInput input = new ComputeUserInput();
         ProcessJob expectedJob = mock(ProcessJob.class);
 
         when(engine.computeUponThis(input)).thenReturn(expectedJob);
 
+        // Act
         ProcessJob result = engine.computeUponThis(input);
 
+        // Assert
         assertEquals(expectedJob, result);
-
-        verify(engine).computeUponThis(input);
-
-
-
+        verify(engine).computeUponThis(input); // Verify method call
     }
-
 }
+

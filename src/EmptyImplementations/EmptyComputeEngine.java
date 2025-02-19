@@ -1,7 +1,7 @@
 package api;
 
 
-public class EmptyComputeEngine extends ComputeEngineAPI{
+public class EmptyComputeEngine implements ComputeEngineAPI{
 		
 		
 	    public ProcessJob processTheJob(ComputeUserInput generalInput) {

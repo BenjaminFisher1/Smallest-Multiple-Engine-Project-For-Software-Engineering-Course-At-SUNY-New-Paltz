@@ -13,6 +13,6 @@ public class TestComputeImplement {
         ComputeImplement impl = mock(ComputeImplement.class);
         when(impl.userInput(0)).thenReturn(0);
 
-        assertEquals(0,impl.userInputInt(0))
+        assertEquals(0,impl.userInputInt(0));
     }
 }

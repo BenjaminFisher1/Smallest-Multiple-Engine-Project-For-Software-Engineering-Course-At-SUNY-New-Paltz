@@ -11,7 +11,7 @@ public class TestComputeImplement {
     @Test
     public void testUserInput(){
         ComputeImplement impl = mock(ComputeImplement.class);
-        when(impl.userInput(0)).thenReturn(0);
+        when(impl.userInputInt(0)).thenReturn(0);
 
         assertEquals(0,impl.userInputInt(0));
     }

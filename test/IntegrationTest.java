@@ -29,7 +29,7 @@ public class IntegrationTest {
 
         // initialize components
         EmptyDataStorage dataStorage = new EmptyDataStorage();
-        EmptyComputeEngineAPI computeAPI = new EmptyComputeEngineAPI();
+        EmptyComputeEngine computeAPI = new EmptyComputeEngine();
 
         // store input data
         DataStoreRequest request = new DataStoreRequest();

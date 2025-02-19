@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class TestComputeEngineAPI {
     @Test
-    void testComputeUponThis(){
+    public void testComputeUponThis(){
         ComputeEngineAPI api = mock(ComputeEngineAPI.class);
         ComputeUserInput input = new ComputeUserInput();
         ProcessJob job =mock(ProcessJob.class);

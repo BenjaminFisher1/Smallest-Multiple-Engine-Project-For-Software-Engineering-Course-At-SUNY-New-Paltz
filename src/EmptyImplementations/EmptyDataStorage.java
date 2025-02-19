@@ -1,6 +1,6 @@
 package api;
 
-public class EmptyDataStore implements DataStorage{
+public class EmptyDataStorage implements DataStorage{
 	
 	public DataStoreInput storeData(DataStoreRequest dataStoreRequest) {
 		return new DataStoreInput(){};

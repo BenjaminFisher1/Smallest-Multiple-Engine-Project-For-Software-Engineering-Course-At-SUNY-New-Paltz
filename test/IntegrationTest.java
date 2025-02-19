@@ -23,7 +23,7 @@ public class IntegrationTest {
     public void testIntegration() {
         // setup input and output configurations
         InMemoryInput inputConfig = new InMemoryInput();
-        inputConfig.inputs.addAll(List.of(1, 10, 25));
+        inputConfig.inputList.addAll(List.of(1, 10, 25));
 
         InMemoryOutput output = new InMemoryOutput();
 

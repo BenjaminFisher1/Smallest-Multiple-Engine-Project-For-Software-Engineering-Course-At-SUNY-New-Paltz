@@ -1,5 +1,6 @@
 
 
+import api.EmptyDataStorage;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.util.List;
@@ -27,8 +28,8 @@ public class IntegrationTest {
         InMemoryOutput output = new InMemoryOutput();
 
         // initialize components
-        DataStorage dataStorage = new DataStorage();
-        ComputeEngineAPI computeAPI = new ComputeEngineAPI();
+        EmptyDataStorage dataStorage = new EmptyDataStorage();
+        EmptyComputeEngineAPI computeAPI = new EmptyComputeEngineAPI();
 
         // store input data
         DataStoreRequest request = new DataStoreRequest();

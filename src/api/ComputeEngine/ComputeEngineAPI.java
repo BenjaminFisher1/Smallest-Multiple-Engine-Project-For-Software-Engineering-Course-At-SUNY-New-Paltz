@@ -6,4 +6,3 @@ import project.annotations.ConceptualAPI;
 public interface ComputeEngineAPI {
 	ProcessJob computeUponThis(ComputeUserInput generalInput);
 }
-//comment

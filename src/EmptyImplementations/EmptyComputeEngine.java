@@ -4,13 +4,14 @@ package api;
 public class EmptyComputeEngine implements ComputeEngineAPI{
 		
 		
-	    public ProcessJob processTheJob(ComputeUserInput generalInput) {
+	    public ProcessJob computeUponThis(ComputeUserInput generalInput) {
 	    	
 //	    	ProcessJob placeholderProcessJob = new ProcessJob();
 	    	
 	    	return new ProcessJob(){};
-	    	
-	}
+	    }
+	    
+	   
 }
 
 //hello

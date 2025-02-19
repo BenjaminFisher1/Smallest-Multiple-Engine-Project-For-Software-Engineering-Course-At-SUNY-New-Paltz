@@ -1,8 +1,8 @@
 package api;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals; // ✅ Correct import for JUnit 5
-import static org.mockito.Mockito.*; // ✅ Import all Mockito functions
+import static org.junit.jupiter.api.Assertions.assertEquals; //  Correct import for JUnit 5
+import static org.mockito.Mockito.*; //  Import all Mockito functions
 
 public class TestComputeEngineAPI {
 
@@ -20,7 +20,7 @@ public class TestComputeEngineAPI {
         ProcessJob result = engine.computeUponThis(input);
 
         // Assertions
-        assertEquals(expectedJob, result); // ✅ Fixed
-        verify(engine).computeUponThis(input); // ✅ Fixed
+        assertEquals(expectedJob, result);
+        verify(engine).computeUponThis(input);
     }
 }

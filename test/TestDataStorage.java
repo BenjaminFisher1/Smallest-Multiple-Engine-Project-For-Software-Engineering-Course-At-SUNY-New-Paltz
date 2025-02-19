@@ -31,5 +31,6 @@ public class TestDataStorage{
 		when(testDataStorage.retrieveData(testDataStoreInput)).thenReturn(testDataRetrieveComputed);
 		assertEquals(testDataRetrieveComputed, testDataStorage.retrieveData(testDataStoreInput));
 	}
+	//test
 	
 }

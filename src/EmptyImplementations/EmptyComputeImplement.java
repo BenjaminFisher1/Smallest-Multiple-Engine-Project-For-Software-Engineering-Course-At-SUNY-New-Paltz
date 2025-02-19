@@ -1,6 +1,6 @@
 package api;
 
-public class EmptyComputeImplment implements ComputeImplement {
+public class EmptyComputeImplement implements ComputeImplement {
     public int userInputInt(int n){
         return 0;
     }

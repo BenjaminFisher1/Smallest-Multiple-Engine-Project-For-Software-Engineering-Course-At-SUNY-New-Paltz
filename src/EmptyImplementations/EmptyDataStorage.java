@@ -7,7 +7,7 @@ public class EmptyDataStorage implements DataStorage{
 	}
 	
 	public DataRetrieveComputed retrieveData(DataStoreInput userInput) {
-		return new DataRetreiveComputed(){};
+		return new DataRetrieveComputed(){};
 	}
 		
 }

@@ -6,14 +6,21 @@ import org.junit.Test;
 
 public class TestComputeEngineAPI extends ComputeEngineAPI{
     @Test
-    public void testComputeUponThis(){
-        ComputeEngineAPI api = mock(ComputeEngineAPI.class);
+    public void testComputeEngineBehvior(){
+        ComputeEngineAPI engine = mock(ComputeEngineAPI.class);
         ComputeUserInput input = new ComputeUserInput();
-        ProcessJob job =mock(ProcessJob.class);
+        ProcessJob expectedJob = mock(ProcessJob.class);
 
-        when(api.computeUponThis(input)).thenReturn(job);
+        when(engine.computeUponThis(input)).thenReturn(expectedJob);
 
-        assertEquals(job,api.computeUponThis(input));
+        ProcessJob result = engine.computeUponThis(input);
+
+        assertEquals(expectedJob, result);
+
+        verify(engine).computeUponThis(input);
+
+
+
     }
 
 }

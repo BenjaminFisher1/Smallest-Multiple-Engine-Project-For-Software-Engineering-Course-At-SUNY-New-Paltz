@@ -4,7 +4,7 @@ import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.mock;
 import org.junit.Test;
 
-public class TestComputeEngineAPI {
+public class TestComputeEngineAPI extends ComputeEngineAPI{
     @Test
     public void testComputeUponThis(){
         ComputeEngineAPI api = mock(ComputeEngineAPI.class);

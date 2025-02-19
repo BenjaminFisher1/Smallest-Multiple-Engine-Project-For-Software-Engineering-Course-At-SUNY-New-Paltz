@@ -4,6 +4,8 @@ import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.mock;
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
 import  org.junit.Test;
 
 public class TestDataStorage{
@@ -29,7 +31,7 @@ public class TestDataStorage{
 		DataRetrieveComputed testDataRetrieveComputed = mock(DataRetrieveComputed.class);
 		
 		when(testDataStorage.retrieveData(testDataStoreInput)).thenReturn(testDataRetrieveComputed);
-		assertEquals(testDataRetrieveComputed, testDataStorage.retrieveData(testDataStoreInput));
+		Assert.assertEquals(testDataRetrieveComputed, testDataStorage.retrieveData(testDataStoreInput));
 	}
 	//test
 	

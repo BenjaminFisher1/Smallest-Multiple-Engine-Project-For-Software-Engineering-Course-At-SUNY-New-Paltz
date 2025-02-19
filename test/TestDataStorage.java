@@ -29,7 +29,7 @@ public class TestDataStorage{
 		DataRetrieveComputed testDataRetrieveComputed = mock(DataRetrieveComputed.class);
 		
 		when(testDataStorage.retrieveData(testDataStoreInput)).thenReturn(testDataRetrieveComputed);
-		Assert.assertEquals(testDataRetrieveComputed, testDataStorage.retrieveData(testDataStoreInput));
+		assertEquals(testDataRetrieveComputed, testDataStorage.retrieveData(testDataStoreInput));
 	}
 	
 }

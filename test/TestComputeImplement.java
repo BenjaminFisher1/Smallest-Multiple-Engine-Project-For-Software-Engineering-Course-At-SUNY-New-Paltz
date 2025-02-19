@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 public class TestComputeImplement {
+    @Test
     public void testUserInput(){
         ComputeImplement impl = mock(ComputeImplement.class);
         when(impl.userInput(0)).thenReturn(0);

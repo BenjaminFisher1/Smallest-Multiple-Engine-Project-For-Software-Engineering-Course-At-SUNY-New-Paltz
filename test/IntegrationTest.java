@@ -22,14 +22,14 @@ public class IntegrationTest {
     @Test
     public void testIntegration() {
         // setup input and output configurations
-        InMemoryInputConfig inputConfig = new InMemoryInputConfig();
+        InMemoryInput inputConfig = new InMemoryInput();
         inputConfig.inputs.addAll(List.of(1, 10, 25));
 
-        InMemoryOutputConfig outputConfig = new InMemoryOutputConfig();
+        InMemoryOutput output = new InMemoryOutput();
 
         // initialize components
-        DataStorage dataStorage = new DataStorageImpl();
-        ComputeEngineAPI computeAPI = new ComputeEngineAPIImpl();
+        DataStorage dataStorage = new DataStorage();
+        ComputeEngineAPI computeAPI = new ComputeEngineAPI();
 
         // store input data
         DataStoreRequest request = new DataStoreRequest();

@@ -1,7 +1,11 @@
+package api;
+import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.mock;
-import org.junit.Test;
+import api.ComputeEngineAPI;
+import api.ComputeUserInput;
+import api.ProcessJob;
 
 public class TestComputeEngineAPI extends ComputeEngineAPI{
     @Test

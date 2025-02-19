@@ -20,7 +20,7 @@ public class TestDataStorage{
 		DataRetrieveComputed testDataRetrieveComputed = mock(DataRetrieveComputed.class);
 		
 		when(testDataStorage.storeData(testDataStoreRequest)).thenReturn(testDataStoreInput);
-		assertEquals(testDataStoreInput, testDataStorage.storeData(testDataStoreRequest));
+		Assert.assertEquals(testDataStoreInput, testDataStorage.storeData(testDataStoreRequest));
 	}
 	
 	@Test

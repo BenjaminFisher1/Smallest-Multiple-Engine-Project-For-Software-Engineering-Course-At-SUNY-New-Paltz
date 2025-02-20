@@ -1,4 +1,4 @@
-# SoftwareEngineering
+# Smallest Multiple Engine Project For Software Engineering Course At SUNY New Paltz
 Repo for software engineering class project
 Edit
 

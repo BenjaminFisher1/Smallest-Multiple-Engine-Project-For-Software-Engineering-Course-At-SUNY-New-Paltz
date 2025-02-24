@@ -8,12 +8,12 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestComputeImplement {
+public class TestNetworker {
     @Test
     public void testUserInput(){
-        ComputeImplement impl = mock(ComputeImplement.class);
-        when(impl.userInputInt(0)).thenReturn(0);
+        Networker networker = mock(Networker.class);
+        when(networker.userInputInt(0)).thenReturn(0);
 
-        assertEquals(0,impl.userInputInt(0));
+        assertEquals(0,networker.userInputInt(0));
     }
 }

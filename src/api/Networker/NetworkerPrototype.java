@@ -3,7 +3,7 @@ package api;
 import project.annotations.NetworkAPIPrototype;
 
 @NetworkAPIPrototype
-public abstract class NetworkerPrototype{
+public class NetworkerPrototype{
     public void prototype(Networker networker) {
     	InputConfiguration inputConfig = new InputConfiguration() {
     		

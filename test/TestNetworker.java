@@ -10,10 +10,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestNetworker {
     @Test
-    public void testUserInput(){
-        Networker networker = mock(Networker.class);
-        when(networker.userInputInt(0)).thenReturn(0);
-
-        assertEquals(0,networker.userInputInt(0));
+    public void testCompute(){
+        Networker testNetworker = mock(Networker.class);
+        ComputeRequest testComputeRequest = mock(ComputeRequest.class);
+        ComputeResult testComputeResult = mock(ComputeResult.class);
+        
+//        InputConfiguration testInputConfig = mock(InputConfiguration.class);
+//        OutputConfiguration testOutputConfig = mock(OutputConfiguration.class);
+        when(testNetworker.compute(testComputeRequest)).thenReturn(testComputeResult);
+        Assert.assertEquals(testComputeResult, testNetworker.compute(testComputeRequest));
     }
 }

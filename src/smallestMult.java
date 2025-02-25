@@ -1,5 +1,5 @@
 
-public class smallestMult{
+public static class smallestMult{
 	public static void main(String[] args) {
 
 		long k = 20;

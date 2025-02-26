@@ -1,6 +1,6 @@
 package api;
 
-public class ComputeUserInput {
+public class ComputeUserInput implements ComputeEngineAPI{
 		
 	ComputeUserInput(int userInput){		//change later?
 		int value = userInput;

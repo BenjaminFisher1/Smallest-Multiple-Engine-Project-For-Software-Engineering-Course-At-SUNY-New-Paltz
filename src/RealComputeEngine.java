@@ -1,12 +1,12 @@
 public class RealComputeEngine implements ComputeEngineAPI{
 	public RealComputeEngine(){
 		ComputeUserInput userInput = new ComputeUserInput();		//has value
-		ProcessedJob processJob;
+		ProcessedJob processedJob = new ProcessedJob();
 			//runs computation on value of userInput
 	}
 	
-	public void ProcessedJob compute(ComputeUserInput userInput) {
-		this.ProcessedJob = this.computeUponThis(generalInput);
+	public void compute(ComputeUserInput userInput) {
+		this.processedJob = this.computeUponThis(generalInput);
 	}
 	
 }

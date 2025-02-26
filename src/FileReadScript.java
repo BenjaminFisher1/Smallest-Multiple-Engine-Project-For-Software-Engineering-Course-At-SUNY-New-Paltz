@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class FileReadScript {
     public List<Integer> readIntegers(String filePath){
         List<Integer> integers = new ArrayList<>();

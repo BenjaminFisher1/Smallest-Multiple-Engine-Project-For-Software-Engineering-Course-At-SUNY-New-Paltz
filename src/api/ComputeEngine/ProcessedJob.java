@@ -2,6 +2,8 @@ package api;
 
 public class ProcessedJob{
 	
+	private long value;
+	
 	ProcessedJob(){
 		long value = 2;
 	}

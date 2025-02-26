@@ -1,6 +1,8 @@
 package api;
 
 public class ComputeUserInput implements ComputeEngineAPI{
+	
+	private int value;
 		
 	ComputeUserInput(int userInput){		//change later?
 		 int value = userInput;
@@ -10,7 +12,7 @@ public class ComputeUserInput implements ComputeEngineAPI{
 		 int value = 2;
 	}
 	
-	public int getValue(int value) {
+	public int getValue(){
 		return this.value;
 	}
 	

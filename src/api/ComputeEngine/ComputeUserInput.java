@@ -3,15 +3,15 @@ package api;
 public class ComputeUserInput implements ComputeEngineAPI{
 		
 	ComputeUserInput(int userInput){		//change later?
-		int value = userInput;
+		public int value = userInput;
 	}
 	
 	ComputeUserInput(){
-		int value = 2;
+		public int value = 2;
 	}
 	
 	public int getValue() {
-		return value;
+		return this.value;
 	}
 	
 }

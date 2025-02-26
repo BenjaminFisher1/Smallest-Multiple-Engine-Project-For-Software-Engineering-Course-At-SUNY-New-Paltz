@@ -18,7 +18,7 @@ public class FileReadScript {
                 if (Character.isDigit(ch)){
                     currentNumber.append(ch);
                 } else if (currentNumber.length() > 0){
-                    integers.add((int) Long.parseLong(currentNumber.toString()))
+                    integers.add((int) Long.parseLong(currentNumber.toString()));
                     currentNumber.setLength(0);
                 }
             }

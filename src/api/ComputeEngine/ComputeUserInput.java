@@ -4,9 +4,10 @@ public class ComputeUserInput {
 		
 	ComputeUserInput(int userInput){		//change later?
 		int value = userInput;
+		
+	}
+	public int getValue() {
+		return value;
 	}
 	
-	public int getValue() {
-		return this.value;
-	}
 }

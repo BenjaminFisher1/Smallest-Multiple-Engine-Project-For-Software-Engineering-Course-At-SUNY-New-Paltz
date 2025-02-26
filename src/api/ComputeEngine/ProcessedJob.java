@@ -3,10 +3,10 @@ package api;
 public class ProcessedJob{
 	
 	ProcessedJob(){
-		public long value = 2;
+		long value = 2;
 	}
 	ProcessedJob(long returnOutput){
-		public long value = returnOutput;
+		long value = returnOutput;
 	}
 	
 	public long getValue() {

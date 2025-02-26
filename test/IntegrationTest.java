@@ -14,7 +14,7 @@ import api.ComputeEngineAPI;
 import api.DataStoreRequest;
 import api.DataStoreInput;
 import api.ComputeUserInput;
-import api.ProcessJob;
+import api.ProcessedJob;
 import api.DataRetrieveComputed;
 
 

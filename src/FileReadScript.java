@@ -20,8 +20,7 @@ public class FileReadScript {
                     integers.add((int) Long.parseLong(currentNumber.toString()));
                     currentNumber.setLength(0);
                 }
-            }
-            if(currentNumber.length() > 0){
+            }if(currentNumber.length() > 0){
                 integers.add((int) Long.parseLong(currentNumber.toString()));
             }
         }

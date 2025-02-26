@@ -8,7 +8,7 @@ public class ComputeEngineAPIImpl implements ComputeEngineAPI{
 	public void prototype(ComputeEngineAPI computeEngineApi) {
 		ComputeUserInput generalInput = new ComputeUserInput();
 
-	    ProcessedJob computeJob = computeEngineApi.computeUponThis(generalInput);
+	    ProcessedJob computeJob = ComputeEngineAPI.computeUponThis(generalInput);
 	    
 	}
 	

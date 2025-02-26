@@ -14,7 +14,7 @@ import api.ComputeEngineAPI;
 import api.DataStoreRequest;
 import api.DataStoreInput;
 import api.ComputeUserInput;
-import api.ProcessJob;
+import api.ProcessedJob;
 import api.DataRetrieveComputed;
 
 
@@ -37,7 +37,7 @@ public class IntegrationTest {
         DataStoreInput input = dataStorage.storeData(request);
 
         // perform computation
-        ProcessJob result = computeAPI.computeUponThis(new ComputeUserInput());
+        ProcessedJob result = computeAPI.computeUponThis(new ComputeUserInput());
         DataRetrieveComputed computed = dataStorage.retrieveData(input);
 
         // validate results

@@ -7,7 +7,7 @@ public class ComputeUserInput {
 		
 	}
 	public int getValue() {
-		return value;
+		return this.value;
 	}
 	
 }

@@ -17,13 +17,13 @@ public class TestComputeEngineAPI {
 
         ComputeEngineAPI engine = mock(ComputeEngineAPI.class);
         ComputeUserInput input = new ComputeUserInput();
-        ProcessJob expectedJob = mock(ProcessJob.class);
+        ProcessedJob expectedJob = mock(ProcessedJob.class);
 
 
         when(engine.computeUponThis(input)).thenReturn(expectedJob);
 
 
-        ProcessJob result = engine.computeUponThis(input);
+        ProcessedJob result = engine.computeUponThis(input);
 
 
         assertEquals(expectedJob, result);

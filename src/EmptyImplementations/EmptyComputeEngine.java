@@ -8,7 +8,7 @@ public class EmptyComputeEngine implements ComputeEngineAPI{
 	    	
 //	    	ProcessJob placeholderProcessJob = new ProcessJob();
 	    	
-	    	return new ProcessJob(){};
+	    	return new ProcessedJob(){};
 	    }
 	    
 	   

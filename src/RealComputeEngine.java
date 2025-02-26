@@ -5,8 +5,8 @@ public class RealComputeEngine implements ComputeEngineAPI{
 			//runs computation on value of userInput
 	}
 	
-	public ProcessedJob compute(ComputeUserInput userInput) {
-		return  new ProcessedJob = this.computeUponThis(generalInput);
+	public void ProcessedJob compute(ComputeUserInput userInput) {
+		this.ProcessedJob = this.computeUponThis(generalInput);
 	}
 	
 }

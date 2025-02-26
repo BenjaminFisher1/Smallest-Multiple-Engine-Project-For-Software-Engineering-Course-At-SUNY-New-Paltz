@@ -15,15 +15,15 @@ public class TestComputeEngineAPI {
     @Test
     public void testComputeEngineBehavior() {
 
-        ComputeEngineAPI engine = mock(ComputeEngineAPI.class);
+//        ComputeEngineAPI engine = mock(ComputeEngineAPI.class);
         ComputeUserInput input = new ComputeUserInput();
         ProcessedJob expectedJob = mock(ProcessedJob.class);
 
 
-        when(engine.computeUponThis(input)).thenReturn(expectedJob);
+        when(ComputeEngineAPI.computeUponThis(input)).thenReturn(expectedJob);
 
 
-        ProcessedJob result = engine.computeUponThis(input);
+        ProcessedJob result = ComputeEngineAPI.computeUponThis(input);
 
 
         assertEquals(expectedJob, result);

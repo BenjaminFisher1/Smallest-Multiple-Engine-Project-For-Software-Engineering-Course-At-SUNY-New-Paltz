@@ -10,6 +10,6 @@ public class ProcessedJob{
 	}
 	
 	public long getValue() {
-		return this.value;
+		return value;
 	}
 }

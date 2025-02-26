@@ -4,7 +4,7 @@ import project.annotations.ConceptualAPI;
 
 @ConceptualAPI
 public interface ComputeEngineAPI {
-	ProcessedJob computeUponThis(ComputeUserInput generalInput);
+//	ProcessedJob computeUponThis(ComputeUserInput generalInput);
 	
 	public static ProcessedJob computeUponThis(ComputeUserInput input) {
 		
@@ -12,6 +12,7 @@ public interface ComputeEngineAPI {
 		
 		ProcessedJob returnJob = new ProcessedJob(returnOutput);
 		return returnJob;	
+	
 	}
 	
 	public static long getSmallestMult(int k) {

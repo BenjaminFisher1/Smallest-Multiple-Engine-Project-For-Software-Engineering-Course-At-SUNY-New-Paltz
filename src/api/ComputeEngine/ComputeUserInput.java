@@ -4,11 +4,11 @@ public class ComputeUserInput implements ComputeEngineAPI{
 	
 	private int value;
 		
-	ComputeUserInput(int userInput){		//change later?
+	public ComputeUserInput(int userInput){		//change later?
 		 int value = userInput;
 	}
 	
-	ComputeUserInput(){
+	public ComputeUserInput(){
 		 int value = 2;
 	}
 	

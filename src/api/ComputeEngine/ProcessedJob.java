@@ -4,10 +4,10 @@ public class ProcessedJob{
 	
 	private long value;
 	
-	ProcessedJob(){
+	public ProcessedJob(){
 		long value = 2;
 	}
-	ProcessedJob(long returnOutput){
+	public ProcessedJob(long returnOutput){
 		long value = returnOutput;
 	}
 	

@@ -36,7 +36,7 @@ public class FileReadScript {
         return integers;
     }
     public void displayResult(long result, String filePath){
-        try(FileWriter ;= new FileWriter(filePath)){
+        try(FileWriter = new FileWriter(filePath)){
             writer.write("Smallest multiple: " + result);
         } catch(IIOException e){
             System.out.println("Error!!!!");

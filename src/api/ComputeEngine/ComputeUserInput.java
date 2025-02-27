@@ -1,6 +1,6 @@
 package api;
 
-public interface ComputeUserInput{
+public class ComputeUserInput{
 	
 	private int value;
 		

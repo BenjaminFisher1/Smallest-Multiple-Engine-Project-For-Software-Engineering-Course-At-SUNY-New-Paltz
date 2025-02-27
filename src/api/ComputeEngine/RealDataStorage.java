@@ -15,11 +15,11 @@ public class RealDataStorage implements DataStorage{
 	HashMap<ComputeUserInput, ProcessedJob> inputAndOutputMap = new HashMap<>();
 	
 	
-	public void storeData(ComputeUserInput userInput) {
+	public static void storeData(ComputeUserInput userInput) {
 		inputAndOutputMap.put(userInput, new ProcessedJob());			//inserts key and a temp value
 	}
 	
-	public void storeData(ComputeUserInput userInput, ProcessedJob processedJob) {			//requires key to replace and value to replace
+	public static void storeData(ComputeUserInput userInput, ProcessedJob processedJob) {			//requires key to replace and value to replace
 		inputAndOutputMap.replace(userInput, processedJob);
 	}
 	
@@ -27,7 +27,7 @@ public class RealDataStorage implements DataStorage{
 		return inputAndOutputMap.get(userInput);
 	}
 	
-	public void storeAll(ArrayList<Long> inputs) {
+	public static void storeAll(ArrayList<Long> inputs) {
 		for(long singleInput: inputs) {
 			storeData(new ComputeUserInput(singleInput));
 		}

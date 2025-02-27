@@ -1,4 +1,4 @@
-package emptyImplementations;
+package emptyimplementations;
 import java.util.ArrayList;
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package emptyImplementations;
+package emptyimplementations;
 
 import api.ComputeRequest;
 import api.ComputeResult;

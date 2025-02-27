@@ -13,8 +13,8 @@ import api.DataStoreRequest;
 import api.DataStoreInput;
 import api.ComputeUserInput;
 import api.ProcessedJob;
-import emptyImplementations.EmptyComputeEngine;
-import emptyImplementations.EmptyDataStorage;
+import emptyimplementations.EmptyComputeEngine;
+import emptyimplementations.EmptyDataStorage;
 import api.DataRetrieveComputed;
 
 

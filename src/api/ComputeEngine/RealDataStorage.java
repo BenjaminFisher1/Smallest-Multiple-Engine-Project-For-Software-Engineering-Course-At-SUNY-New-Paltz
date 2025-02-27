@@ -19,7 +19,7 @@ public class RealDataStorage implements DataStorage{
 		inputAndOutputMap.put(userInput, new ProcessedJob());			//inserts key and a temp value
 	}
 	
-	public static void storeData(ComputeUserInput userInput, ProcessedJob processedJob) {			//requires key to replace and value to replace
+	public void storeData(ComputeUserInput userInput, ProcessedJob processedJob) {			//requires key to replace and value to replace
 		inputAndOutputMap.replace(userInput, processedJob);
 	}
 	
@@ -27,7 +27,7 @@ public class RealDataStorage implements DataStorage{
 		return inputAndOutputMap.get(userInput);
 	}
 	
-	public static void storeAll(ArrayList<Long> inputs) {
+	public void storeAll(ArrayList<Long> inputs) {
 		for(long singleInput: inputs) {
 			storeData(new ComputeUserInput(singleInput));
 		}

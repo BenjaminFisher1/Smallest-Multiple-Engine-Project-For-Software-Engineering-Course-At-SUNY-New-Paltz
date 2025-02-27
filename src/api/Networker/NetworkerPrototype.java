@@ -13,9 +13,9 @@ public class NetworkerPrototype{
     		
     	};
     	
-    	ComputeRequest request = new ComputeRequest(inputConfig, outputConfig);		//create request using default delimiter ',' refer to ComputeRequest.java for more info
-   
-    	ComputeResult result = networker.compute(request);
+//    	ComputeRequest request = new ComputeRequest(inputConfig, outputConfig);		//create request using default delimiter ',' refer to ComputeRequest.java for more info
+//   
+//    	ComputeResult result = networker.compute(request);
     }
 
 

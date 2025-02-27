@@ -10,10 +10,10 @@ public class DataStoragePrototype{
 		DataStoreRequest userRawInput = new DataStoreRequest();
 		
 		//write user's input to storage so computer can access
-		DataStoreInput userInput = dataStorage.storeData(userRawInput);
+//		DataStoreInput userInput = dataStorage.storeData(userRawInput);
 		
 		//retrieve computed data
-		DataRetrieveComputed computedData = dataStorage.retrieveData(userInput);
+//		DataRetrieveComputed computedData = dataStorage.retrieveData(userInput);
 
 	}
 }

@@ -1,27 +1,26 @@
-package src;
 
-import java.util.HashMap;
-import api.ComputeUserInput;
-import api.ProcessedJob;
-import api.DataStorage;
-import src.RealDataStorage;
+
+import java.io.IOException;
+
+import api.ComputeRequest;
+import api.ComputeResult;
 
 public class Main{
-	public static void main(String[] args) {
-		RealComputeEngine realComputeEngine = new RealComputeEngine();
-		RealDataStorage realDataStorage = new RealDataStorage();
+	public static void main(String[] args) throws IOException {
+		
 		RealNetworker realNetworker = new RealNetworker();
 		
 		String filename = "sample";
-		realDataStorage.storeAll(realNetworker.getList(filename));
+		ComputeRequest localRequest = new ComputeRequest(filename);
+		ComputeResult localResult;
+		localResult = realNetworker.compute(localRequest);
+		
+		
+		
 		
 		//do all data storing BEFORE beginning calculations
-		//because of this cloning of datastorage map
-		HashMap<ComputeUserInput, ProcessedJob> tempMap = new HashMap<>();
-		tempMap = realDataStorage.getInAndOutMap();
-		for(ComputeUserInput input : tempMap.keySet() ) {		//for each key in hashmap of database
-			realDataStorage.storeData(input, realComputeEngine.computeUponThis(input));		//replace each pair of (input, temp val) with (input, computedInput)
-		}
+		//because of this cloning of data storage  map
+		
 		
 		
 	}

@@ -6,9 +6,8 @@ package api;
 //@ConceptualAPIPrototype
 public class ComputeEngineAPIImpl implements ComputeEngineAPI{
 	public void prototype(ComputeEngineAPI computeEngineApi) {
-		ComputeUserInput generalInput = new ComputeUserInput();
-		
-	    ProcessedJob computeJob = ComputeEngineAPI.computeUponThis(generalInput);
+		ComputeUserInput userInput = new ComputeUserInput();
+	    ProcessedJob ProcessedJob = ComputeEngineAPI.computeUponThis(userInput);
 	    
 	}
 	

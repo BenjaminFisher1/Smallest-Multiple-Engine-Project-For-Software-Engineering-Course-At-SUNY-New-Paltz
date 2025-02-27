@@ -33,8 +33,5 @@ public class RealDataStorage implements DataStorage{
 		
 		
 	}
-		public DataStoreInput storeData(DataStoreRequest dataStoreRequest) {
-			 DataStoreInput doNotUse = new DataStoreInput();
-			 return doNotUse;
-		}
+		
 }

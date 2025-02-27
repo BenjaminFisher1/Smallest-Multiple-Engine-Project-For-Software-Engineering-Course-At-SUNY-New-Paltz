@@ -1,3 +1,4 @@
+package src;
 import api.DataRetrieveComputed;
 import api.DataStorage;
 import api.DataStoreInput;
@@ -23,6 +24,12 @@ public class RealDataStorage implements DataStorage{
 	
 	public ProcessedJob retrieveData(ComputeUserInput userInput){
 		return inputAndOutputMap.get(userInput);
+	}
+	
+	public void storeAll(List<Long> inputs) {
+		for(long singleInput: inputs) {
+			storeData(new ComputeUserInput(singleInput));
+		}
 	}
 	
 	

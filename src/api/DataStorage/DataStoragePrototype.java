@@ -13,7 +13,7 @@ public class DataStoragePrototype{
 //		DataStoreInput userInput = dataStorage.storeData(userRawInput);
 		
 		//retrieve computed data
-		DataRetrieveComputed computedData = dataStorage.retrieveData(userInput);
+//		DataRetrieveComputed computedData = dataStorage.retrieveData(userInput);
 
 	}
 }

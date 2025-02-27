@@ -18,7 +18,7 @@ public class RealDataStorage implements DataStorage{
 	
 	}
 	
-	public static void storeData(ComputeUserInput userInput) {
+	public void storeData(ComputeUserInput userInput) {
 		this.inputAndOutputMap.put(userInput, new ProcessedJob());			//inserts key and a temp value
 	}
 	
@@ -27,7 +27,7 @@ public class RealDataStorage implements DataStorage{
 	}
 	
 	public ProcessedJob retrieveData(ComputeUserInput userInput){
-		return inputAndOutputMap.get(userInput);
+		return this.inputAndOutputMap.get(userInput);
 	}
 	
 	public void storeAll(ArrayList<Long> inputs) {

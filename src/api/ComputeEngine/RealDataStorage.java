@@ -14,7 +14,7 @@ public class RealDataStorage implements DataStorage{
 	
 	
 	public void addInputs(ComputeUserInput userInput) {
-		inputAndOutputMap.put(userInput, new ProcessedJob);			//inserts key and a temp value
+		inputAndOutputMap.put(userInput, new ProcessedJob());			//inserts key and a temp value
 	}
 	
 	public void addOutputs(ComputeUserInput userInput, ProcessedJob processedJob) {			//requires key to replace and value to replace

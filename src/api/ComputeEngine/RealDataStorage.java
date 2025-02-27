@@ -7,6 +7,7 @@ import api.ComputeEngineAPI;
 import api.ComputeUserInput;
 import api.ProcessedJob;
 import java.util.HashMap;
+import java.util.list;
 
 
 public class RealDataStorage implements DataStorage{
@@ -26,7 +27,7 @@ public class RealDataStorage implements DataStorage{
 		return inputAndOutputMap.get(userInput);
 	}
 	
-	public void storeAll(List<Long> inputs) {
+	public void storeAll(ArrayList<Long> inputs) {
 		for(long singleInput: inputs) {
 			storeData(new ComputeUserInput(singleInput));
 		}

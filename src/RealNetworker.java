@@ -17,7 +17,7 @@ import api.ProcessedJob;
 
 public class RealNetworker implements Networker{
 	//needs to take user input and give to database
-	public List<Long> getList(String filename) {
+	public ArrayList<Long> getList(String filename) {
 		return readIntegers(filename);
 	}
 	
@@ -28,8 +28,8 @@ public class RealNetworker implements Networker{
 	
 	//filereading script 
 	
-    public List<Long> readIntegers(String filePath) {
-        List<Long> integers = new ArrayList<>();
+    public ArrayList<Long> readIntegers(String filePath) {
+        ArrayList<Long> integers = new ArrayList<>();
 
 
         try (FileReader reader = new FileReader(filePath)) {

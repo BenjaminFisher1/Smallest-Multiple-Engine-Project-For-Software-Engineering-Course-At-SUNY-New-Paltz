@@ -7,10 +7,6 @@ public class DataRetrieveComputed{
 	public DataRetrieveComputed() {
 		value = 1;
 	}
-	
-	public DataRetrieveComputed() {
-		
-	}
-	
+
 	
 }

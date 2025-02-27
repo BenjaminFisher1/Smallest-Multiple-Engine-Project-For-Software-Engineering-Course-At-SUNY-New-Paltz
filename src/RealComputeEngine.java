@@ -3,7 +3,7 @@ import api.ComputeUserInput;
 import api.ProcessedJob;
 public class RealComputeEngine implements ComputeEngineAPI{
 	public RealComputeEngine(){
-		ComputeUserInput userInput = new ComputeUserInput();		//has value
+		ComputeUserInput userInput = new ComputeUserInput(1);		//has value, where it says 1 put value from file
 		ProcessedJob processedJob = new ProcessedJob();		//runs computation on value of userInput
 	}
 

@@ -8,7 +8,7 @@ public class RealComputeEngine implements ComputeEngineAPI{
 	}
 	
 	public void compute(ComputeUserInput userInput) {
-		this.processedJob = this.computeUponThis(generalInput);
+		this.processedJob = this.computeUponThis(userInput);
 	}
 	
 }

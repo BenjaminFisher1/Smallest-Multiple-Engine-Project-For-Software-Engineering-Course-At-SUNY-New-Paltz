@@ -10,7 +10,7 @@ import api.ProcessedJob;
 public class TestCalculation{
 	
 	@Test
-	public void TestCalculation() {
+	public void testCalculation() {
 		ComputeUserInput userInput = mock(ComputeUserInput.class);
 		ProcessedJob proJob = mock(ProcessedJob.class);
 		assertNotEquals(proJob.getValue(), userInput.getValue());

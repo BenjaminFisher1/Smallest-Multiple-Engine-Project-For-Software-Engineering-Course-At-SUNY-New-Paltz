@@ -18,7 +18,7 @@ public class Main{
 		//because of this cloning of datastorage map
 		HashMap<ComputeUserInput, ProcessedJob> tempMap = new HashMap<>();
 		tempMap = realDataStorage.getInAndOutMap();
-		for(ComputeUserInput input : tempMap.values() ) {		//for each key in hashmap of database
+		for(ComputeUserInput input : tempMap.keySet() ) {		//for each key in hashmap of database
 			realDataStorage.StoreData(input, realComputeEngine.computeUponThis(input));		//replace each pair of (input, temp val) with (input, computedInput)
 		}
 		

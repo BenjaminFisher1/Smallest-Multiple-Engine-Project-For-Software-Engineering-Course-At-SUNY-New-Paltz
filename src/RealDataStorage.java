@@ -63,7 +63,7 @@ public class RealDataStorage implements DataStorage{
 	}
 	
 	
-	//TODO: Write Contents of hashmap to file bufferwriter
+	
 	
 	
 	

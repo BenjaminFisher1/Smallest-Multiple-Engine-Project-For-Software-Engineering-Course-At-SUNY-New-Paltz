@@ -1,4 +1,4 @@
-import api;
+import api.*;
 public class RealComputeEngine implements ComputeEngineAPI{
 	public RealComputeEngine(){
 		ComputeUserInput userInput = new ComputeUserInput();		//has value

@@ -24,4 +24,14 @@ public class RealDataStorage implements DataStorage{
 	public ProcessedJob retrieveData(ComputeUserInput userInput){
 		return inputAndOutputMap.get(userInput);
 	}
+	
+	
+	//BAD CODE BUT HAS TO BE HERE TO PREVENT GRADLE FROM HATING !! DO NOT USE FOR ANYTHING
+	public DataStoreInput storeData(DataStoreRequest dataStoreRequest) {
+		return new DataStoreInput();
+	}
+	
+	public DataRetrieveComputed retrieveData(DataStoreInput userInput) {
+		return new DataRetrieveComputed();
+	}
 }

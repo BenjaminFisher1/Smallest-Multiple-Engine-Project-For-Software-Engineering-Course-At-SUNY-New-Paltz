@@ -12,7 +12,7 @@ public class RealComputeEngine implements ComputeEngineAPI{
 	}
 	
 	@Override	
-public static ProcessedJob computeUponThis(ComputeUserInput input) {
+	public ProcessedJob computeUponThis(ComputeUserInput input) {
 		
 		long returnOutput = getSmallestMult(input.getValue()); //make .value method
 		

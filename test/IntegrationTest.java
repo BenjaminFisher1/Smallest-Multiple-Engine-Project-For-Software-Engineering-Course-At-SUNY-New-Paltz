@@ -1,7 +1,7 @@
 
 
-import api.EmptyComputeEngine;
-import api.EmptyDataStorage;
+import EmptyImplementations.EmptyComputeEngine;
+import EmptyImplementations.EmptyDataStorage;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.util.List;

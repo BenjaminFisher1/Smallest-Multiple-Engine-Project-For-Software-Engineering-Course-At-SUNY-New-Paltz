@@ -1,4 +1,8 @@
-package api;
+package EmptyImplementations;
+
+import api.ComputeRequest;
+import api.ComputeResult;
+import api.Networker;
 
 public class EmptyNetworker implements Networker {
 		

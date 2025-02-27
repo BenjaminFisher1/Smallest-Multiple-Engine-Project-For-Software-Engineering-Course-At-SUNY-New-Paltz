@@ -5,7 +5,7 @@ import api.DataStoreRequest;
 import api.ComputeEngineAPI;
 import api.ComputeUserInput;
 import api.ProcessedJob;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class RealDataStorage implements DataStorage{
@@ -30,5 +30,10 @@ public class RealDataStorage implements DataStorage{
 		public DataRetrieveComputed retrieveData(DataStoreInput userInput) {
 		DataRetrieveComputed doNotUse = new DataRetrieveComputed();
 		return doNotUse;
+		
+		public DataStoreInput storeData(DataStoreRequest dataStoreRequest) {
+			 DataStoreInput doNotUse = new DataStoreInput();
+			 return doNotUse;
+		}
 	}
 }

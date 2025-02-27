@@ -2,7 +2,7 @@ package src;
 
 import java.util.HashMap;
 import api.ComputeUserInput;
-import api.ProcessJob;
+import api.ProcessedJob;
 
 public class Main{
 	public static void main(String[] args) {

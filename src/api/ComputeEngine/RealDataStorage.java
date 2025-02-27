@@ -33,6 +33,20 @@ public class RealDataStorage implements DataStorage{
 		}
 	}
 	
+	public ArrayList<Long> unwrapProcessedJobs(HashMap<ComputeUserInput, ProcessedJob> hm){
+		ArrayList<Long> retArrayList = new ArrayList<>();
+		for(ProcessedJob job: hm.values()) {
+			retArrayList.add(job.getValue());
+		}
+		return retArrayList;
+	}
+	
+	public HashMap<ComputeUserInput, ProcessedJob> getInAndOutMap(){
+		return this.inputAndOutputMap;
+	}
+	
+	
+	
 	
 	//BAD CODE BUT HAS TO BE HERE TO PREVENT GRADLE FROM HATING !! DO NOT USE FOR ANYTHING
 		public DataRetrieveComputed retrieveData(DataStoreInput userInput) {

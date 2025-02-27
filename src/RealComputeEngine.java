@@ -19,7 +19,7 @@ public class RealComputeEngine implements ComputeEngineAPI{
 	
 	}
 	
-	public static long getSmallestMult(int k) {
+	public static long getSmallestMult(long k) {
 		long n = Long.valueOf(k);
 		long smallMult = 1;
 		long i = 1;

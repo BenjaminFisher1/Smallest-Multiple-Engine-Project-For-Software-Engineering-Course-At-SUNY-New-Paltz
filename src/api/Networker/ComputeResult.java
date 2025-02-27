@@ -1,5 +1,7 @@
 package api;
 
-public interface ComputeResult{
+
+
+public interface ComputeResult {
 	
 }

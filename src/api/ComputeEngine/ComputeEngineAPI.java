@@ -6,7 +6,7 @@ import project.annotations.ConceptualAPI;
 public interface ComputeEngineAPI {
 //	ProcessedJob computeUponThis(ComputeUserInput generalInput);
 	
-	public ProcessedJob computeUponThis(ComputeUserInput input) {
+	public static ProcessedJob computeUponThis(ComputeUserInput input) {
 		
 		long returnOutput = getSmallestMult(input.getValue()); //make .value method
 		

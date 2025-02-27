@@ -1,6 +1,6 @@
 package api;
 
-public class ComputeUserInput implements ComputeEngineAPI{
+public interface ComputeUserInput{
 	
 	private int value;
 		

@@ -11,22 +11,23 @@ import java.util.ArrayList;
 
 
 public class RealDataStorage implements DataStorage{
+	private HashMap<ComputeUserInput, ProcessedJob> inputAndOutputMap;
 	public RealDataStorage(){
 	
-	HashMap<ComputeUserInput, ProcessedJob> inputAndOutputMap = new HashMap<>();
+		inputAndOutputMap =  new HashMap<>();
 	
 	}
 	
 	public static void storeData(ComputeUserInput userInput) {
-		this.inputAndOutputMap.put(userInput, new ProcessedJob());			//inserts key and a temp value
+		inputAndOutputMap.put(userInput, new ProcessedJob());			//inserts key and a temp value
 	}
 	
 	public void storeData(ComputeUserInput userInput, ProcessedJob processedJob) {			//requires key to replace and value to replace
-		this.inputAndOutputMap.replace(userInput, processedJob);
+		inputAndOutputMap.replace(userInput, processedJob);
 	}
 	
 	public ProcessedJob retrieveData(ComputeUserInput userInput){
-		return this.inputAndOutputMap.get(userInput);
+		return inputAndOutputMap.get(userInput);
 	}
 	
 	public void storeAll(ArrayList<Long> inputs) {

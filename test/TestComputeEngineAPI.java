@@ -1,13 +1,15 @@
-package api;
 
-import org.mockito.Mockito;
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.any;
-import static org.mockito.Mockito.mock;
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+
+import api.ComputeEngineAPI;
+import api.ComputeUserInput;
+import api.ProcessedJob;
 
 
 public class TestComputeEngineAPI {
@@ -15,7 +17,7 @@ public class TestComputeEngineAPI {
     @Test
     public void testComputeEngineBehavior() {
 
-//        ComputeEngineAPI engine = mock(ComputeEngineAPI.class);
+    	ComputeEngineAPI engine = mock(ComputeEngineAPI.class);
         ComputeUserInput input = new ComputeUserInput();
         ProcessedJob expectedJob = mock(ProcessedJob.class);
 
@@ -27,6 +29,6 @@ public class TestComputeEngineAPI {
 
 
         assertEquals(expectedJob, result);
-//        verify(engine).computeUponThis(input);
+       
     }
 }

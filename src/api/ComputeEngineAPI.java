@@ -10,7 +10,7 @@ public interface ComputeEngineAPI {
 		long returnOutput = getSmallestMult(input.getValue()); //make .value method
 		
 		ProcessedJob returnJob = new ProcessedJob(returnOutput);
-		return returnJob;	
+		return returnJob;	//j
 	
 	}
 	

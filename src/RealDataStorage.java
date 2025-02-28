@@ -1,13 +1,16 @@
-package src;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import api.ComputeUserInput;
 import api.DataRetrieveComputed;
 import api.DataStorage;
 import api.DataStoreInput;
-import api.DataStoreRequest;
-import api.ComputeEngineAPI;
-import api.ComputeUserInput;
 import api.ProcessedJob;
-import java.util.HashMap;
-import java.util.ArrayList;
 
 
 public class RealDataStorage implements DataStorage{
@@ -47,6 +50,19 @@ public class RealDataStorage implements DataStorage{
 	public HashMap<ComputeUserInput, ProcessedJob> getInAndOutMap(){
 		return this.inputAndOutputMap;
 	}
+	
+	public File getOutputFile() throws IOException {
+		FileWriter fileWriter = new FileWriter("outputFile.txt");
+		 try (BufferedWriter writer = new BufferedWriter(fileWriter)) {
+	            for (ProcessedJob job : this.getInAndOutMap().values()) {
+	                writer.write((int) job.getValue());
+	                writer.newLine();
+	            }
+		 }
+		 return new File("outputFile.txt");
+	}
+	
+	
 	
 	
 	

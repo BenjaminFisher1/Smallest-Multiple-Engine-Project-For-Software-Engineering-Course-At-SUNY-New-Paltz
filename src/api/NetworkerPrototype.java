@@ -1,9 +1,11 @@
 package api;
 
+import java.io.IOException;
+
 import project.annotations.NetworkAPIPrototype;
 
 @NetworkAPIPrototype
-public class NetworkerPrototype{
+public class NetworkerPrototype implements Networker{
     public void prototype(Networker networker) {
     	InputConfiguration inputConfig = new InputConfiguration() {
     		
@@ -17,6 +19,12 @@ public class NetworkerPrototype{
 //   
 //    	ComputeResult result = networker.compute(request);
     }
+
+	@Override
+	public ComputeResult compute(ComputeRequest request) throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 
 }

@@ -1,7 +1,7 @@
 
 
-import EmptyImplementations.EmptyComputeEngine;
-import EmptyImplementations.EmptyDataStorage;
+import emptyimplementations.EmptyComputeEngine;
+import emptyimplementations.EmptyDataStorage;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.util.List;
@@ -15,6 +15,8 @@ import api.DataStoreRequest;
 import api.DataStoreInput;
 import api.ComputeUserInput;
 import api.ProcessedJob;
+import emptyimplementations.EmptyComputeEngine;
+import emptyimplementations.EmptyDataStorage;
 import api.DataRetrieveComputed;
 
 

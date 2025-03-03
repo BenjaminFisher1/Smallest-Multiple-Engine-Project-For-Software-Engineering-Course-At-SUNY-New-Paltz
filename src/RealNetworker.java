@@ -28,6 +28,8 @@ public class RealNetworker implements Networker{
 //    }
     String test = "defualtFile";
 
+    String test = "defualtFile";
+
 	public ArrayList<Long> getList(String filename) {
 		return readIntegers(filename);
 	}

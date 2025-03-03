@@ -12,7 +12,12 @@ public class RealComputeEngine implements ComputeEngineAPI{
 	
 	public ProcessedJob computeUponThis(ComputeUserInput input) {
 		
-		long returnOutput = getSmallestMult(input.getValue()); //make .value method
+		try{ //make .value method
+			long returnOutput = getSmallestMult(input.getValue());
+		}catch(Exeption e) {
+			input.setValue(1);
+			long returnOutput = getSmallestMult(input.getValue());
+		}
 		
 		ProcessedJob returnJob = new ProcessedJob(returnOutput);
 		return returnJob;	

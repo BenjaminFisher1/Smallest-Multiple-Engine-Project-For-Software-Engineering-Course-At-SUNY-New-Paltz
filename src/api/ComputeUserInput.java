@@ -18,6 +18,8 @@ public class ComputeUserInput{
 		return this.value;
 	}
 	
-	
+	public void setValue(long k){
+		this.value = k;
+	}
 	
 }

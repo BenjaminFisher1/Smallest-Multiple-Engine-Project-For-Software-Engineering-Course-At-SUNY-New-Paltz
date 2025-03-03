@@ -1,5 +1,7 @@
 
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
@@ -8,16 +10,17 @@ import api.ComputeRequest;
 import api.ComputeResult;
 
 
-public class IntegrationTest {
+public class ExceptionHandlingIntegrationTest {
 
     @Test
     public void testIntegration() throws IOException {
     	//initialize Networker
     	RealNetworker testNetworker = new RealNetworker();  
-    	String testFilename = "testFile";
+    	String testFilename = "";	//feed filereading script an empty file name
     	
-    	ComputeRequest testRequest = new ComputeRequest(testFilename);
+    	ComputeRequest testRequest = new ComputeRequest(testFilename);		//If we cannot find a file with that name, which we cannot, because it is empty, we will default to using safetyFile.txt, which contains 1. 
     	ComputeResult testResult = testNetworker.compute(testRequest);
+    	assertNotNull(testResult.getFile(), "File is null. Check that safetyFile.txt exists.");
     	
     	
 //        // setup input and output configurations

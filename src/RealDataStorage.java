@@ -71,7 +71,7 @@ public class RealDataStorage implements DataStorage{
 	
 	
 	
-	//BAD CODE BUT HAS TO BE HERE TO PREVENT GRADLE FROM HATING !! DO NOT USE FOR ANYTHING
+	//BAD CODE BUT HAS TO BE HERE TO PREVENT GRADLE FROM HATING !! DO NOT USE FOR ANYTHING!
 		public DataRetrieveComputed retrieveData(DataStoreInput userInput) {
 		DataRetrieveComputed doNotUse = new DataRetrieveComputed();
 		return doNotUse;

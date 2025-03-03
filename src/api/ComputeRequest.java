@@ -1,7 +1,7 @@
 package api;
 
 public class ComputeRequest{
-		private final String filename;
+		private String filename;
 		private int status;
 		
 		public ComputeRequest(String filename){
@@ -16,8 +16,14 @@ public class ComputeRequest{
 		public int getStatus() {
 			return this.status;
 		}
+
+		public void newFileName(String s){
+			this.filename = s;
+		}
 		
 	}
+
+
 
 //		private static final char DEFAULT_DELIMITER = ',';
 //		

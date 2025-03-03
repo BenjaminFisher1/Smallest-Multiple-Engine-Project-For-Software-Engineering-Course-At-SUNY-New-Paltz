@@ -22,8 +22,12 @@ public class RealDataStorage implements DataStorage{
 	}
 	
 	public void storeData(ComputeUserInput userInput) {
-		this.inputAndOutputMap.put(userInput, new ProcessedJob());			//inserts key and a temp value
-	}
+		try {
+			this.inputAndOutputMap.put(userInput, new ProcessedJob());			//inserts key and a temp value
+		}catch(Exception missingMap){
+			
+		}
+	}	
 	
 	public void storeData(ComputeUserInput userInput, ProcessedJob processedJob) {			//requires key to replace and value to replace
 		this.inputAndOutputMap.replace(userInput, processedJob);

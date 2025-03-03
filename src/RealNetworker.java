@@ -24,7 +24,7 @@ public class RealNetworker implements Networker{
 		realDataStorage = new RealDataStorage();
 	}
     public void newFileName(String s){
-        this.fileName = s;
+        this.filename = s;
     }
 
 	public ArrayList<Long> getList(String filename) {

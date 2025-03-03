@@ -26,6 +26,7 @@ public class RealNetworker implements Networker{
 //    public void newFileName(String s){
 //        this.filename = s;
 //    }
+    String test = "defualtFile";
 
 	public ArrayList<Long> getList(String filename) {
 		return readIntegers(filename);

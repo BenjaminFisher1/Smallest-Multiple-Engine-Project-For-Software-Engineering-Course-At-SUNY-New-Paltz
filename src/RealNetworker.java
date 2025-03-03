@@ -30,7 +30,11 @@ public class RealNetworker implements Networker{
 		return readIntegers(filename);
 	}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes

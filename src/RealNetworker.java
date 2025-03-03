@@ -29,15 +29,18 @@ public class RealNetworker implements Networker{
 	public ArrayList<Long> getList(String filename) {
 		return readIntegers(filename);
 	}
+<<<<<<< Updated upstream
 	
+=======
+
+>>>>>>> Stashed changes
 	public ComputeResult compute(ComputeRequest request) throws IOException {
 		ArrayList<Long> tempList = new ArrayList<Long>();
-		try{
-            tempList = (ArrayList<Long>)readIntegers(request.getFileName()).clone();	//the warning it is giving here is irrelevant because the method should always return a new arraylist of longs
+        try {
+            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();
         } catch (Exception e) {
-            request.newFileName(defaultFileName);
-            tempList = (ArrayList<Long>)readIntegers(request.getFileName()).clone();
-
+            request.newFileName(defaultFileName); // OR use 'test' if correct
+            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();
         }
 		
 		realDataStorage.storeAll(tempList);

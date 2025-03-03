@@ -1,13 +1,18 @@
 package api;
 
+import com.sun.jdi.connect.Connector;
+
 public class ComputeUserInput{
 	
 	private long value;
 		
 	
 	
-	public ComputeUserInput(long userInput){		//change later?
-		 long value = userInput;
+	public ComputeUserInput(long userInput){
+		if(userInput < 1 ){
+			throw new ArgumentException("User input must be a positive number");
+		}
+		 value = userInput;
 	}
 	
 	public ComputeUserInput(){

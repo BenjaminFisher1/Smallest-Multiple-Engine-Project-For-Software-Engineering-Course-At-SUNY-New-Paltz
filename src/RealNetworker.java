@@ -23,9 +23,7 @@ public class RealNetworker implements Networker{
 		realComputeEngine = new RealComputeEngine();
 		realDataStorage = new RealDataStorage();
 	}
-//    public void newFileName(String s){
-//        this.filename = s;
-//    }
+
     String test = "defualtFile";
 
 	public ArrayList<Long> getList(String filename) {

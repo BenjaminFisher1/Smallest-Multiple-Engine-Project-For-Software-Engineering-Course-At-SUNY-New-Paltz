@@ -29,6 +29,7 @@ public class RealNetworker implements Networker{
 	public ArrayList<Long> getList(String filename) {
 		return readIntegers(filename);
 	}
+    //comment
 	
 	public ComputeResult compute(ComputeRequest request) throws IOException {
 		ArrayList<Long> tempList = new ArrayList<Long>();

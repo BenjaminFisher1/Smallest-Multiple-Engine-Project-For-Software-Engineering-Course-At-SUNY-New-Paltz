@@ -87,8 +87,42 @@ public class RealNetworker implements Networker{
                 integers.add(Long.parseLong(currentNumber.toString()));
             }
 
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {		//if file not found, we will default to the safetyFile.txt file, that contains simply "1"
             System.out.println("File not found: " + e.getMessage());
+            
+            try (FileReader reader = new FileReader("safetyFile")) {
+                StringBuilder currentNumber = new StringBuilder();
+                int character;
+
+
+                while ((character = reader.read()) != -1) {
+                    char ch = (char) character;
+
+
+                    if (Character.isDigit(ch)) {
+                        currentNumber.append(ch);
+                    } else if (currentNumber.length() > 0) {
+                        integers.add(Long.parseLong(currentNumber.toString()));
+                        currentNumber.setLength(0);
+                    }
+                }
+
+
+                if (currentNumber.length() > 0) {
+                    integers.add(Long.parseLong(currentNumber.toString()));
+                }
+
+            } catch (FileNotFoundException e2) {
+                System.out.println("Missing safety file: " + e.getMessage());
+                
+            } catch (IOException e2) {
+                System.out.println("Error reading file: " + e.getMessage());
+            }
+
+            return integers;
+        
+            
+            
         } catch (IOException e) {
             System.out.println("Error reading file: " + e.getMessage());
         }

@@ -9,12 +9,17 @@ import java.util.ArrayList;
 
 public class ComputeResult {
 	private File resultsFile;
+	
 	public ComputeResult(File fromDataStorage) {
 		this.resultsFile = fromDataStorage;
 	}
 	
 	public ComputeResult() {
 		
+	}
+	
+	public File getFile() {
+		return this.resultsFile;
 	}
 }
 	

@@ -10,7 +10,7 @@ public class ComputeUserInput{
 	
 	public ComputeUserInput(long userInput){
 		if(userInput < 1 ){
-			throw new ArgumentException("User input must be a positive number");
+			throw new IllegalArgumentException("User input must be a positive number");
 		}
 		 value = userInput;
 	}

@@ -24,7 +24,7 @@ public class RealNetworker implements Networker{
 		realDataStorage = new RealDataStorage();
 	}
 
-    String test = "defualtFile";
+    String defaultFileName = "defualtFile";
 
 	public ArrayList<Long> getList(String filename) {
 		return readIntegers(filename);
@@ -35,7 +35,7 @@ public class RealNetworker implements Networker{
 		try{
             tempList = (ArrayList<Long>)readIntegers(request.getFileName()).clone();	//the warning it is giving here is irrelevant because the method should always return a new arraylist of longs
         } catch (Exception e) {
-            request.newFileName(test);
+            request.newFileName(defaultFileName);
             tempList = (ArrayList<Long>)readIntegers(request.getFileName()).clone();
 
         }

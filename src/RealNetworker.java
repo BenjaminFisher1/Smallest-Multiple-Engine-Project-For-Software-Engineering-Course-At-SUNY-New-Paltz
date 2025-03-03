@@ -23,6 +23,9 @@ public class RealNetworker implements Networker{
 		realComputeEngine = new RealComputeEngine();
 		realDataStorage = new RealDataStorage();
 	}
+    public void newFileName(String new){
+        this.fileName = new;
+    }
 
 	public ArrayList<Long> getList(String filename) {
 		return readIntegers(filename);

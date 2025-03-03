@@ -10,8 +10,6 @@ public interface Networker {
     }
     //comment
 
-    public void newFileName(String new){
-        this.fileName = new;
-    }
+
 
 

@@ -29,15 +29,7 @@ public class RealNetworker implements Networker{
 	public ArrayList<Long> getList(String filename) {
 		return readIntegers(filename);
 	}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-	
-=======
 
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
 	public ComputeResult compute(ComputeRequest request) throws IOException {
 		ArrayList<Long> tempList = new ArrayList<Long>();
         try {

@@ -13,7 +13,7 @@ import api.ComputeResult;
 public class ExceptionHandlingIntegrationTest {
 
     @Test
-    public void testIntegration() throws IOException {
+    public void testExceptionIntegration() throws IOException {
     	//initialize Networker
     	RealNetworker testNetworker = new RealNetworker();  
     	String testFilename = "";	//feed filereading script an empty file name

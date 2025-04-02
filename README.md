@@ -6,4 +6,6 @@ Assignment #2: The system will find the smallest postive number that is evenly d
   Ex) Input : 10
       Output: 2520 
 
+Number of Threads: 4
+
 ![System Diagram]https://github.com/BenjaminFisher1/SoftwareEngineering/blob/main/System%20Diagram.pdf

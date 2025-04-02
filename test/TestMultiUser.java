@@ -70,7 +70,7 @@ public class TestMultiUser {
       });
      
      
-      // Check tha   t the output is the same for multi-threaded and single-threaded
+      // Check that the output is the same for multi-threaded and single-threaded
       List<String> singleThreaded = loadAllOutput(singleThreadFilePrefix, numThreads);
       List<String> multiThreaded = loadAllOutput(multiThreadFilePrefix, numThreads);
       Assert.assertEquals(singleThreaded, multiThreaded);

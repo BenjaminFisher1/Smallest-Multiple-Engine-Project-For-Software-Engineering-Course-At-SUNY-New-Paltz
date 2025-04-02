@@ -19,11 +19,12 @@ public class TestMultiUser {
 
    // TODO 1: change the type of this variable to the name you're using for your @NetworkAPI
    // interface
-   public RealNetworker coordinator;
-  
+   public MultiNetworker coordinator;
+   public RealNetworker singleCoordinator;
+
    @BeforeEach
    public void initializeComputeEngine() {
-      this.coordinator = new RealNetworker();
+      this.coordinator = new MultiNetworker();
       //TODO 2: create an instance of the implementation of your @NetworkAPI; this is the component
       // that the user will make requests to
       // Store it in the 'coordinator' instance variable
@@ -35,7 +36,7 @@ public class TestMultiUser {
       int numThreads = 4;
       List<TestUser> testUsers = new ArrayList<>();
       for (int i = 0; i < numThreads; i++) {
-         testUsers.add(new TestUser(coordinator));
+         testUsers.add(new TestUser(singleCoordinator));
       }
      
       // Run single threaded

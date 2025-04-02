@@ -20,7 +20,8 @@ public class TestMultiUser {
    // TODO 1: change the type of this variable to the name you're using for your @NetworkAPI
    // interface
    public MultiNetworker coordinator;
-  
+   public RealNetworker singleCoordinator;
+
    @BeforeEach
    public void initializeComputeEngine() {
       this.coordinator = new MultiNetworker();
@@ -35,7 +36,7 @@ public class TestMultiUser {
       int numThreads = 4;
       List<TestUser> testUsers = new ArrayList<>();
       for (int i = 0; i < numThreads; i++) {
-         testUsers.add(new TestUser(coordinator));
+         testUsers.add(new TestUser(singleCoordinator));
       }
      
       // Run single threaded

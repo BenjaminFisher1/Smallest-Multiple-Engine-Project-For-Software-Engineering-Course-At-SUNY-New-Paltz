@@ -55,7 +55,7 @@ public class RealNetworker implements Networker{
 			realDataStorage.storeData(input, realComputeEngine.computeUponThis(input));		//replace each pair of (input, temp val) with (input, computedInput)
 		}
 		
-		return new ComputeResult(realDataStorage.getOutputFile());
+		return new ComputeResult(realDataStorage.getOutputFile(request.getOutputFileName()));
 	}
 	
 	

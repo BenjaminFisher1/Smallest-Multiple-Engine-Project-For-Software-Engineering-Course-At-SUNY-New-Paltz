@@ -82,15 +82,15 @@ public class RealDataStorage implements DataStorage{
 		
 	}
 	
-	public File getOutputFile() throws IOException {
-		FileWriter fileWriter = new FileWriter("outputFile.txt");
+	public File getOutputFile(String filename) throws IOException {
+		FileWriter fileWriter = new FileWriter(filename);
 		 try (BufferedWriter writer = new BufferedWriter(fileWriter)) {
 	            for (ProcessedJob job : this.getInAndOutMap().values()) {
-	                writer.write((int) job.getValue());
+	                writer.write("" + job.getValue());
 	                writer.newLine();
 	            }
 		 }
-		 return new File("outputFile.txt");
+		 return new File(filename);
 	}
 	
 	

@@ -1,7 +1,9 @@
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -11,8 +13,6 @@ import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import api.ComputeResult;
-
 
 public class TestMultiUser {
 
@@ -20,7 +20,7 @@ public class TestMultiUser {
    // TODO 1: change the type of this variable to the name you're using for your @NetworkAPI
    // interface
    public MultiNetworker coordinator;
-   public RealNetworker singleCoordinator;
+   public RealNetworker singleCoordinator = new RealNetworker();
 
    @BeforeEach
    public void initializeComputeEngine() {
@@ -36,7 +36,7 @@ public class TestMultiUser {
       int numThreads = 4;
       List<TestUser> testUsers = new ArrayList<>();
       for (int i = 0; i < numThreads; i++) {
-         testUsers.add(new TestUser(singleCoordinator));
+         testUsers.add(new TestUser(coordinator)); //make take in multohtreaded
       }
      
       // Run single threaded
@@ -73,6 +73,8 @@ public class TestMultiUser {
       // Check that the output is the same for multi-threaded and single-threaded
       List<String> singleThreaded = loadAllOutput(singleThreadFilePrefix, numThreads);
       List<String> multiThreaded = loadAllOutput(multiThreadFilePrefix, numThreads);
+      Collections.sort(singleThreaded);
+      Collections.sort(multiThreaded);
       Assert.assertEquals(singleThreaded, multiThreaded);
    }
 

@@ -3,9 +3,16 @@ package api;
 public class ComputeRequest{
 		private String filename;
 		private int status;
+		private String outputFileName;
 		
-		public ComputeRequest(String filename){
+		
+		public ComputeRequest(String filename){  
+			this(filename, "output.txt");				//calling constructor with default output name
+		}
+		
+		public ComputeRequest(String filename, String outputFileName){
 			this.filename = filename;
+			this.outputFileName = outputFileName;
 			this.status = 1;   				
 		}
 		
@@ -19,6 +26,10 @@ public class ComputeRequest{
 
 		public void newFileName(String s){
 			this.filename = s;
+		}
+		
+		public String getOutputFileName() {
+			return this.outputFileName;
 		}
 		
 	}

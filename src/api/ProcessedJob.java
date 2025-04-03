@@ -8,7 +8,7 @@ public class ProcessedJob{
 		long value = 2;
 	}
 	public ProcessedJob(long returnOutput){
-		long value = returnOutput;
+		this.value = returnOutput;
 	}
 	
 	public long getValue() {

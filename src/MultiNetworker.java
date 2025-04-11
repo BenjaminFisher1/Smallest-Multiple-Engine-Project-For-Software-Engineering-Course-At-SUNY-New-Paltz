@@ -32,7 +32,7 @@ public class MultiNetworker implements Networker{
 //    public void newFileName(String s){
 //        this.filename = s;
 //    }
-    String test = "defualtFile";
+//    String test = "defualtFile";
 
     String defaultFileName = "defualtFile";
 

@@ -14,6 +14,8 @@ public class ComputeResult {
 		this.resultsFile = fromDataStorage;
 	}
 	
+
+	
 	public ComputeResult() {
 		
 	}

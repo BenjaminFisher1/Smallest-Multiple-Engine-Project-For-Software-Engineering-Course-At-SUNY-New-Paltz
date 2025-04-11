@@ -1,0 +1,15 @@
+package networkerServer;
+
+message clientRequest{
+	optional string filename = 1;
+	optional int32 status = 2;
+	optional string outputFileName = 3;
+}
+
+message serverResponse{
+	optional string writtenFileLocation = 1;
+}
+
+service networkerService{
+	rpc networkerServiceProcess (clientRequest) returns (serverResponse){}
+}

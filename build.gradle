@@ -12,6 +12,7 @@ sourceSets {
 	    srcDirs = ['protobuf']
 	  }
 	  java {
+
 		srcDirs = ['src',
 					'build/generated/source/proto/main/grpc',
 					'build/generated/source/proto/main/java']

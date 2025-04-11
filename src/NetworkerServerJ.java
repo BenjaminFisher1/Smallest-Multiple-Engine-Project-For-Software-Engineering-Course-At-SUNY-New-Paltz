@@ -12,7 +12,7 @@ import networkerServer.NetworkerServer.serverResponse;
 import networkerServer.networkerServiceGrpc.networkerServiceImplBase;
 
 
-public class networkerServerJ{
+public class NetworkerServerJ{
 	private Server server;
 	
 	//start server
@@ -21,7 +21,7 @@ public class networkerServerJ{
 		
 		//assign to server val a new grpc server built using specified port & insecure creds (we are local machine only)
 		server = Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create())
-				.addService(new networkerServerImpl())
+				.addService(new NetworkerServerImpl())
 				.addService(ProtoReflectionService.newInstance())
 				.build()
 				.start();
@@ -52,12 +52,12 @@ public class networkerServerJ{
 		}
 		
 		public static void main(String[] args) throws Exception {
-			networkerServerJ server = new networkerServerJ();
+			NetworkerServerJ server = new NetworkerServerJ();
 			server.start();
 			server.blockUntilShutdown();
 		}
 	
-	class networkerServerImpl extends networkerServiceImplBase{
+	class NetworkerServerImpl extends networkerServiceImplBase{
 		
 		/*This is not as evil as it looks. Basically, we are making sort of constructor taking in a request
 		 * and an observer that waits for a server response. looks ugly because we have to import stuff.

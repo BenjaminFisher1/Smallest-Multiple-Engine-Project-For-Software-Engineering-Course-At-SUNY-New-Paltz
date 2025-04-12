@@ -111,7 +111,7 @@ public class Client{
 			try {
 				client.sendRequest(computeRequest);
 			} catch (Exception e) {
-				
+				System.out.println("Failed to send request");
 			}
 			
 			

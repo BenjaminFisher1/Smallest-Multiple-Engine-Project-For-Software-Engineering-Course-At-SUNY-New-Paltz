@@ -1,8 +1,7 @@
-import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -61,8 +60,8 @@ public class Client{
 		}
 		
 		//evil default: this is to prevent from overwriting an existing user output.
-		String userEnteredFileName = "4203jsjr093tempoutput9";
-		
+		String userEnteredFileName = "4203jsjr093tempoutput9.txt";
+		ArrayList<Integer> inputArrayList = new ArrayList<>();
 		
 		//get input file, or make one from user entered nums
 		if(desiredFileType == 1) {
@@ -75,14 +74,33 @@ public class Client{
 			}
 		} else {
 			//input from a bunch of user inputted numbers (evil!)
-			ArrayList<Integer> inputArrayList = new ArrayList<>();
 			
-			System.out.println("Enter numbers manually, end input with character -");
-			while(!scanner.next().equals("-")) {
-				if(scanner.hasNextInt()) {
-					inputArrayList.add(scanner.nextInt());
+			
+			System.out.println("Enter numbers manually, end input by typing -");
+			boolean firstRun = true;
+			while(true) {
+				String curLine = scanner.nextLine();
+				if(curLine.equals("-")) {
+					break;
+				}
+				try {
+					int num = Integer.parseInt(curLine);
+					inputArrayList.add(num);
+				}catch(NumberFormatException e) {
+					if(!firstRun){
+						System.out.println("Invalid Input. Enter an integer, or - to end.");
+					}else {
+						firstRun = true;
+					}
+					
 				}
 			}
+			
+//			while(scanner.hasNext() && !scanner.next().equals("-")) {
+//				if(scanner.hasNextInt()) {
+//					inputArrayList.add(scanner.nextInt());
+//				}
+//			}
 			
 			try (FileWriter writer = new FileWriter(userEnteredFileName)) {	
 	            writeToFile(inputArrayList, userEnteredFileName);
@@ -126,11 +144,13 @@ public class Client{
 		
 	}
 	public static void writeToFile(ArrayList<Integer> list, String filePath) throws IOException {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(filePath))) {
             for (Integer num : list) {
-                writer.write(num);
-                writer.newLine(); // Add a new line after each item
+                writer.println(num);
+                writer.println("x");
+                 // Add a delim char s
             }
+            writer.close();
         }
     }
 }

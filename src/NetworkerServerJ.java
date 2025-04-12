@@ -63,16 +63,20 @@ public class NetworkerServerJ{
 		 * and an observer that waits for a server response. looks ugly because we have to import stuff.
 		 */
 		public void networkerServiceProcess(networkerServer.NetworkerServer.clientRequest request, 
-				io.grpc.stub.StreamObserver<NetworkerServer.serverResponse> responseObserver) {
+				io.grpc.stub.StreamObserver<networkerServer.NetworkerServer.serverResponse> responseObserver) {
 				MultiNetworker multiNetworker = new MultiNetworker();
 				
 				try {
 					String filename = request.getFilename();
-					ComputeRequest localRequest = new ComputeRequest(filename);
+					String outputFileName = request.getOutputFileName();
+					ComputeRequest localRequest = new ComputeRequest(filename, outputFileName);
 					ComputeResult localResult;
 					localResult = multiNetworker.compute(localRequest);
 					
 					serverResponse response = serverResponse.newBuilder().setWrittenFileLocation(request.getOutputFileName()).build();
+					
+					responseObserver.onNext(response);
+					responseObserver.onCompleted();
 					
 				}catch (Exception e) {
 					e.printStackTrace();

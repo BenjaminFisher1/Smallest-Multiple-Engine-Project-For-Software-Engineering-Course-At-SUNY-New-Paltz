@@ -18,8 +18,8 @@ public class DataStorageServer{
 		
 		//make a new grpc server built using specified port & insecure creds
 		server = Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create())
-				.addService(new fetchDataStorageServerImpl())
-				.addService(new storeDataStorageServerImpl())
+				.addService(new FetchDataStorageServerImpl())
+				.addService(new StoreDataStorageServerImpl())
 				.addService(ProtoReflectionService.newInstance())
 				.build()
 				.start();
@@ -62,7 +62,7 @@ public class DataStorageServer{
 	
 	
 	 
-	class storeDataStorageServerImpl extends storeDataStorageServiceImplBase{
+	class StoreDataStorageServerImpl extends storeDataStorageServiceImplBase{
 		
 		public void storeDataStorageServer(dataStorageServer.DataStorageServer.storeRequest storeReq,
 				io.grpc.stub.StreamObserver<dataStorageServer.DataStorageServer.emptyMessage> responseObserver) {
@@ -77,7 +77,7 @@ public class DataStorageServer{
 		
 	}
 	
-class fetchDataStorageServerImpl extends fetchDataStorageServiceImplBase{
+class FetchDataStorageServerImpl extends fetchDataStorageServiceImplBase{
 		
 		public void fetchDataStorageService(dataStorageServer.DataStorageServer.fetchRequest fetch, 
 				io.grpc.stub.StreamObserver<dataStorageServer.DataStorageServer.emptyMessage> responseObserver) {

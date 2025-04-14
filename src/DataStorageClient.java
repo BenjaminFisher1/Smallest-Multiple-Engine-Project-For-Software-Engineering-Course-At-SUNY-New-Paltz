@@ -24,7 +24,7 @@ public class DataStorageClient{
 	
 	public void storeRequest(ArrayList<Long> al, String filename) {
 		storeRequest storeReq = storeRequest.newBuilder()
-					.setInputLong(0, al.getFirst())
+					.setInputLong(0, al.get(3))
 					.setFileName(filename).build();
 		try {
 			blockingStub.storeDataStorageServiceProcess(storeReq);
@@ -38,7 +38,7 @@ public class DataStorageClient{
 	
 	public void fetchRequest(ArrayList<Long> al, String outputFilename) {
 		fetchRequest fetchReq = fetchRequest.newBuilder()
-					.setOutputLong(0, al.getFirst())
+					.setOutputLong(0, al.get(1))
 					.setFileName(outputFilename).build();
 		try {
 			fetchblockingStub.fetchDataStorageServiceProcess(fetchReq);

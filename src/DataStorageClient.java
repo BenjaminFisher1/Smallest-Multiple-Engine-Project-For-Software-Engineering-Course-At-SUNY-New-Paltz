@@ -54,7 +54,7 @@ public class DataStorageClient{
 		String target = "localhost:50052";
 		ManagedChannel channel = Grpc.newChannelBuilder(target, InsecureChannelCredentials.create()).build();
 		try {
-			DataStorageClient DSclient = new DataStorageClient(channel);
+			DataStorageClient dSclient = new DataStorageClient(channel);
 		}catch (Exception e){
 			System.out.println("Failed to store");	
 		} finally {

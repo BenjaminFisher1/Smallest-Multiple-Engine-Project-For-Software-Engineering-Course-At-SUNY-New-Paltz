@@ -22,9 +22,9 @@ public class DataStorageClient{
 		fetchblockingStub = fetchDataStorageServiceGrpc.newBlockingStub(channel);
 	}
 	
-	public void storeRequest(ArrayList<Long> list, String filename) {
+	public void storeRequest(ArrayList<Long> al, String filename) {
 		storeRequest storeReq = storeRequest.newBuilder()
-					.setInputLong(0, list.getFirst())
+					.setInputLong(0, al.getFirst())
 					.setFileName(filename).build();
 		try {
 			blockingStub.storeDataStorageServiceProcess(storeReq);
@@ -36,9 +36,9 @@ public class DataStorageClient{
 	
 	}
 	
-	public void fetchRequest(ArrayList<Long> list, String outputFilename) {
+	public void fetchRequest(ArrayList<Long> al, String outputFilename) {
 		fetchRequest fetchReq = fetchRequest.newBuilder()
-					.setOutputLong(0, list.getFirst())
+					.setOutputLong(0, al.getFirst())
 					.setFileName(outputFilename).build();
 		try {
 			fetchblockingStub.fetchDataStorageServiceProcess(fetchReq);

@@ -1,12 +1,12 @@
 package dataStorageServer;
 
 message storeRequest {
-    optional int64 inputLong = 1;
+    repeated int64 inputLong = 1;
     optional string fileName = 2;
 }
 
 message fetchRequest{
-    optional int64 outputLong = 1;
+    repeated int64 outputLong = 1;
     optional string fileName = 2;
 }
 
@@ -14,10 +14,14 @@ message responseData{
     optional int32 errCode = 1;
 }
 
+message emptyMessage{
+
+}
+
 service storeDataStorageService{
-    rpc storeDataStorageServiceProcess (storeRequest) returns (responseData) {}
+    rpc storeDataStorageServiceProcess (storeRequest) returns (emptyMessage) {}
 }
 
 service fetchDataStorageService{
-    rpc fetchDataStorageServiceProcess (fetchRequest) returns (responseData) {}
+    rpc fetchDataStorageServiceProcess (fetchRequest) returns (emptyMessage) {}
 }

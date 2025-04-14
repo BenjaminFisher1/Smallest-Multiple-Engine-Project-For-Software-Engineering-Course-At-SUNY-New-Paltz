@@ -60,6 +60,17 @@ public class RealDataStorage implements DataStorage{
 		}
 	}
 	
+//	public void storeAllServer(ArrayList<Long> inputs) {
+//		for(long singleInput: inputs) {
+//			try {
+//				storeData(new ComputeUserInput(singleInput), new ProcessedJob(singleInput));
+//			}catch(Exception inputGeneralException){			
+//				storeData(new ComputeUserInput(1), new ProcessedJob(1));				
+//			}
+//			
+//		}
+//	}
+	
 	public ArrayList<Long> unwrapProcessedJobs(HashMap<ComputeUserInput, ProcessedJob> hm){
 		ArrayList<Long> retArrayList = new ArrayList<>();
 		for(ProcessedJob job: hm.values()) {

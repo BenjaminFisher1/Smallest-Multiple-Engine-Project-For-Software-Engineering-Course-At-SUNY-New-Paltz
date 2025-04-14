@@ -107,6 +107,8 @@ public class Client{
 	        } catch (IOException e) {
 	            System.out.println("Error writing result to file: " + e.getMessage());
 	        }	
+			
+			
 				
 				
 		}
@@ -119,6 +121,7 @@ public class Client{
 			System.out.println("error with assigning output file name");
 		}
 		
+		scanner.close();
 		//build a ComputeRequest off of the entered filename and output name
 		ComputeRequest computeRequest = new ComputeRequest(userEnteredFileName, userEnteredOutputName);
 		System.out.println("computeRequest built with: " + computeRequest.getFileName() + ", " + computeRequest.getOutputFileName());

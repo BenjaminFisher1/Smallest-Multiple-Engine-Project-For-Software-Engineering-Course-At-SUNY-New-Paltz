@@ -20,7 +20,7 @@ import api.ProcessedJob;
 public class MultiNetworker implements Networker{
 	RealComputeEngine realComputeEngine = new RealComputeEngine();
 	RealDataStorage realDataStorage = new RealDataStorage();
-	private int numThreads = 4;
+	private int numThreads = 12;
 	private final ExecutorService threadPool = Executors.newFixedThreadPool(numThreads);
 	
 	//needs to take user input and give to database

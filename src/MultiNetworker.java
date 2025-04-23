@@ -20,7 +20,7 @@ import api.ProcessedJob;
 public class MultiNetworker implements Networker{
 	RealComputeEngine realComputeEngine = new RealComputeEngine();
 	RealDataStorage realDataStorage = new RealDataStorage();
-	private int numThreads = 12;
+	private int numThreads = 6;
 	private final ExecutorService threadPool = Executors.newFixedThreadPool(numThreads);
 	
 	//needs to take user input and give to database
@@ -88,6 +88,55 @@ public class MultiNetworker implements Networker{
 		return new ComputeResult(localDataStorage.getOutputFile(request.getOutputFileName()));
 	}
 	
+	 public long computeSpeed(ComputeRequest request) throws IOException {
+	    	long timeStart = System.nanoTime();
+	    	
+			ArrayList<Long> tempList = new ArrayList<Long>();
+			
+			RealDataStorage localDataStorage = new RealDataStorage();
+			
+
+	        try {
+	            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();			//maybe revisit if clone is needed
+	        } catch (Exception e) {
+	            request.newFileName(defaultFileName); // OR use 'test' if correct
+	            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();
+			
+	        }
+			
+			localDataStorage.storeAll(tempList);
+			
+			
+		
+			HashMap<ComputeUserInput, ProcessedJob> tempMap = localDataStorage.getInAndOutMap();
+			List<Future<Void>> futures = new ArrayList<>();
+			
+			
+			//need blocking call see playgame use get() on the futures once theyve started see play game example
+			
+			//start threads
+			for(ComputeUserInput input : tempMap.keySet() ) {		//for each key in hash map of database
+				futures.add(threadPool.submit(() ->{
+					
+					localDataStorage.storeData(input, realComputeEngine.computeUponThis(input));	//replace each pair of (input, temp val) with (input, computedInput)
+					return null;
+				}));
+				
+			}
+			//get results from threads (barricade)
+			futures.forEach(future -> {
+				try {
+					future.get();
+				} catch(Exception e) {
+					throw new RuntimeException(e);
+				}
+			});
+			long timeStop = System.nanoTime();
+			
+			
+			return (timeStop - timeStart);
+		}
+
 	
 	
 	

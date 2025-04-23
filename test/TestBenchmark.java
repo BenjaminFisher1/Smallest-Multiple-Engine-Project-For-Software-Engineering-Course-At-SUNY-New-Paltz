@@ -2,11 +2,13 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.IOException;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import api.ComputeRequest;
 
 public class TestBenchmark{
+	@Disabled("This test is disabled because gradle is trying to run it while uploading to github. However, it requires networker server and datastorageserver to be online, which github cant do.")
 	@Test
 	public void benchmark() throws IOException {
 		

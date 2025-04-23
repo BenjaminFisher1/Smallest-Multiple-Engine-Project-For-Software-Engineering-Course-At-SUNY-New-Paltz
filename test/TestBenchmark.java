@@ -8,7 +8,7 @@ import api.ComputeRequest;
 
 public class TestBenchmark{
 	@Test
-	public void TestBenchmark() throws IOException {
+	public void benchmark() throws IOException {
 		
 		MultiNetworker fastNetworker = new MultiNetworker();
 		SlowNetworker slowNetworker = new  SlowNetworker();

@@ -5,7 +5,8 @@ The user can input a text file that contains many numbers, and our program will 
 
 
 
-Number of Threads: 4
+Original Number of Threads: 4
+Current Number of Threads: 6
 
 ![System Diagram]https://github.com/BenjaminFisher1/SoftwareEngineering/blob/main/System%20Diagram.pdf
 

@@ -19,7 +19,7 @@ import networkerServer.networkerServiceGrpc.networkerServiceBlockingStub;
 public class Client{
 	private final networkerServiceBlockingStub blockingStub;
 	
-	public Client(Channel channel) {
+	Public Client(Channel channel) {
 		blockingStub = networkerServiceGrpc.newBlockingStub(channel);
 	}
 	

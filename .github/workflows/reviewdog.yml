@@ -143,7 +143,7 @@ jobs:
       - name: Unexpected failure (local)
         run: |
           cd ./_testdata/ && reviewdog -conf=reviewdog_error.yml \
-            -reporter=local -diff='git diff master' || EXIT_CODE=$?
+            -reporter=local -diff='git diff NewMain' || EXIT_CODE=$?
           test "${EXIT_CODE}" = 1
       - name: Suggestion (rdjsonl)
         env:

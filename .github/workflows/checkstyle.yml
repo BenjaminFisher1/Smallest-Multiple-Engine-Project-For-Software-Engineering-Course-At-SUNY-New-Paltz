@@ -33,8 +33,7 @@ jobs:
         run: |
           exec java -jar /opt/lib/checkstyle.jar "." -c "checkstyle_checks.xml" -f xml > results.xml
           
-      - name: Setup reviewdog
-        uses: reviewdog/action-setup@v1.3.2
+    
 
       - name: Print Results
         run: echo "$(cat results.xml)"

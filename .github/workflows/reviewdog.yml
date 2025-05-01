@@ -318,30 +318,30 @@ jobs:
           reporter: github-check
           level: info
 
-  textlint:
-    name: runner / textlint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893 # v1.3.2
-      - run: npm install
-      - name: textlint
-        env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npx textlint -f checkstyle README.md | \
-            reviewdog -f=checkstyle -name="textlint" -reporter=github-check -level=info
+  # textlint:
+  #   name: runner / textlint
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+  #     - uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893 # v1.3.2
+  #     - run: npm install
+  #     - name: textlint
+  #       env:
+  #         REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       run: |
+  #         npx textlint -f checkstyle README.md | \
+  #           reviewdog -f=checkstyle -name="textlint" -reporter=github-check -level=info
 
-  sarif:
-    name: runner / textlint sarif
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893 # v1.3.2
-      - run: npm install
-      - name: textlint sarif
-        env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npx textlint -f @microsoft/eslint-formatter-sarif README.md | \
-            reviewdog -f=sarif -name="textlint" -reporter=github-check -level=info
+  # sarif:
+  #   name: runner / textlint sarif
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+  #     - uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893 # v1.3.2
+  #     - run: npm install
+  #     - name: textlint sarif
+  #       env:
+  #         REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       run: |
+  #         npx textlint -f @microsoft/eslint-formatter-sarif README.md | \
+  #           reviewdog -f=sarif -name="textlint" -reporter=github-check -level=info

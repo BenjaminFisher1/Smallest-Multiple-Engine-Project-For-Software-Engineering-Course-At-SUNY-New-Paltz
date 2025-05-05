@@ -15,13 +15,13 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"google.golang.org/protobuf/testing/protocmp"
 
-	"github.com/reviewdog/reviewdog"
-	"github.com/reviewdog/reviewdog/cienv"
-	"github.com/reviewdog/reviewdog/doghouse"
-	"github.com/reviewdog/reviewdog/doghouse/client"
-	"github.com/reviewdog/reviewdog/filter"
-	"github.com/reviewdog/reviewdog/project"
-	"github.com/reviewdog/reviewdog/proto/rdf"
+	// "github.com/reviewdog/reviewdog"
+	// "github.com/reviewdog/reviewdog/cienv"
+	// "github.com/reviewdog/reviewdog/doghouse"
+	// "github.com/reviewdog/reviewdog/doghouse/client"
+	// "github.com/reviewdog/reviewdog/filter"
+	// "github.com/reviewdog/reviewdog/project"
+	// "github.com/reviewdog/reviewdog/proto/rdf"
 )
 
 func TestDiagnosticResultSet_Project(t *testing.T) {

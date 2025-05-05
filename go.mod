@@ -3,7 +3,7 @@ module github.com/BenjaminFisher1/Smallest-Multiple-Engine-Project-For-Software-
 go 1.23.0
 toolchain go1.24.2
 
-require (
+<!-- require (
 	cloud.google.com/go/compute/metadata v0.6.0
 	cloud.google.com/go/datastore v1.20.0
 	code.gitea.io/sdk/gitea v0.21.0
@@ -76,4 +76,4 @@ require (
 	google.golang.org/genproto/googleapis/api v0.0.0-20241007155032-5fefd90f89a9 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20241015192408-796eee8c2d53 // indirect
 	google.golang.org/grpc v1.67.1 // indirect
-)
+) -->

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import project.annotations.ProcessAPI;
 
 @ProcessAPI
-public interface DataStorage{
+Public interface DataStorage{
 	
 	
 	

@@ -6,20 +6,20 @@ import (
 	"fmt"
 	"io"
 	"log"
-	"net/http"
-	"os"
+	// "net/http"
+	// "os"
 
-	"golang.org/x/oauth2"
-	"golang.org/x/sync/errgroup"
+	// "golang.org/x/oauth2"
+	// "golang.org/x/sync/errgroup"
 
-	"github.com/reviewdog/reviewdog"
-	"github.com/reviewdog/reviewdog/cienv"
-	"github.com/reviewdog/reviewdog/doghouse"
-	"github.com/reviewdog/reviewdog/doghouse/client"
-	"github.com/reviewdog/reviewdog/pathutil"
-	"github.com/reviewdog/reviewdog/project"
-	"github.com/reviewdog/reviewdog/proto/rdf"
-	"github.com/reviewdog/reviewdog/service/serviceutil"
+	// "github.com/reviewdog/reviewdog"
+	// "github.com/reviewdog/reviewdog/cienv"
+	// "github.com/reviewdog/reviewdog/doghouse"
+	// "github.com/reviewdog/reviewdog/doghouse/client"
+	// "github.com/reviewdog/reviewdog/pathutil"
+	// "github.com/reviewdog/reviewdog/project"
+	// "github.com/reviewdog/reviewdog/proto/rdf"
+	// "github.com/reviewdog/reviewdog/service/serviceutil"
 )
 
 func runDoghouse(ctx context.Context, r io.Reader, w io.Writer, opt *option, isProject bool) error {

@@ -245,35 +245,35 @@ jobs:
           cat ./_testdata/custom_rdjson.json | \
             reviewdog -name="custom-rdjson" -f=rdjson -reporter=github-pr-annotations
 
-  # reviewdog-sarif:
-  #   permissions:
-  #     contents: read
-  #     actions: read
-  #     security-events: write
-  #   name: reviewdog (sarif)
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-  #     - uses: actions/setup-go@0aaccfd150d50ccaeb58ebd88d36e91967a5f35b # v5.4.0
-  #       with:
-  #         go-version-file: "go.mod"
-  #     - name: Setup reviewdog
-  #       # uses: reviewdog/action-setup@v1
-  #       run: |
-  #         go install ./cmd/reviewdog
-  #     - name: Custom rdjson test
-  #       run: |
-  #         mkdir ../results
-  #         cat ./_testdata/custom_rdjson.json |
-  #           reviewdog -name="custom-rdjson" -f=rdjson -reporter=sarif |
-  #           tee ../results/custom-rdjson.sarif
-  #     - name: Install linters
-  #       run: go install golang.org/x/lint/golint@latest
-  #     - name: Run golint
-  #       run: |
-  #         golint ./... | reviewdog -f=golint -reporter=sarif |
-  #           tee ../results/golint.sarif
-  #     - uses: github/codeql-action/upload-sarif@28deaeda66b76a05916b6923827895f2b14ab387 # v3.28.16
+  reviewdog-sarif:
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+    name: reviewdog (sarif)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-go@0aaccfd150d50ccaeb58ebd88d36e91967a5f35b # v5.4.0
+        with:
+          go-version-file: "go.mod"
+      - name: Setup reviewdog
+        # uses: reviewdog/action-setup@v1
+        run: |
+          go install ./cmd/reviewdog
+      - name: Custom rdjson test
+        run: |
+          mkdir ../results
+          cat ./_testdata/custom_rdjson.json |
+            reviewdog -name="custom-rdjson" -f=rdjson -reporter=sarif |
+            tee ../results/custom-rdjson.sarif
+      - name: Install linters
+        run: go install golang.org/x/lint/golint@latest
+      - name: Run golint
+        run: |
+          golint ./... | reviewdog -f=golint -reporter=sarif |
+            tee ../results/golint.sarif
+      - uses: github/codeql-action/upload-sarif@28deaeda66b76a05916b6923827895f2b14ab387 # v3.28.16
 
   typos:
     name: runner / typos

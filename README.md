@@ -1,20 +1,47 @@
 # Smallest Multiple Engine Project For Software Engineering Course At SUNY New Paltz
-This project is designed to compute the smallest number that can be evenly divided by all the numbers 1 through n, where n is a user inputted number.
-The user can input a text file that contains many numbers, and our program will use multithreaded process managing to run the computation on each number contained in the text file, then output each result to a new text file.
+
+
+![embed](https://beldenfarmstand.com/wp-content/uploads/2018/06/2017-08-23_11-50-08_724.jpeg)
+
+
+Welcome to the Smallest Multiple Engine Project, an advanced, multithreaded solution for calculating the smallest multiple of a range of numbers. Developed as part of the Software Engineering course at SUNY New Paltz, this project showcases the power of optimized multithreaded computation.
+
+## Project Overview 
+This project efficiently computes the smallest multiple that can be evenly divided by all numbers in a given range (1 to n). Built with Java and multithreading, it preforms seamlessly, even for larger values!
+
+### Key Features
+
+* Multi-threaded Performance: Leverages parallel processing for faster calculations.
+* Flexible Input: Accepts a text file with a list of numbers to process.
+* Automated Output: Generates a result file with the smallest multiples for each input.
+-Error Handling: Strong validation and error management for user inputs.
+
+## Thread Configuration
+* Original Number of Threads: 4
+* Current Number of Threads: 6
+
+## How It Works
+1) Provide a text file containing the list of numbers you want to process.
+2) The program spawns multiple threads to compute the smallest multiple for each number.
+3) Results are saved in a new text file for easy reference.
+
+### Example
+* Input: 10
+* Output: 2520
+
+## Benchmark Test Results
+Through benchmark testing, we determined that 6 threads provide the best performance for this project (approximately 24% faster than the initial 4-thread setup). However, increasing the number of threads to 12 led to inconsistent results, indicating an optimal balance at 6.
+
+## Usage
+1) Prepare an input file with one number per line.
+2) Run the program, specifying the input file path.
+3) The program outputs a text file with the computed smallest multiples.
+
+### Technologies Used
+* Java: Core language for efficient and scalable development.
+* Multithreading: Optimized for concurrent processing.
 
 
 
-
-Original Number of Threads: 4
-Current Number of Threads: 6
-
-![System Diagram]https://github.com/BenjaminFisher1/SoftwareEngineering/blob/main/System%20Diagram.pdf
-
-Assignment #2: The system will find the smallest postive number that is evenly divisable by all the numbers in 1-n
-  Ex) Input : 10
-      Output: 2520 
-
-
-Benchmark Test Results: 
-When doing the benchmark testing, we found out that 6 threads was the optimal amount of threads for our project to run faster as opposed to 4. We ran into issues when raising the number of threads to 12 which was too high and was producing inconsistent results. With the number of threads being 6, we noticed the MultiNetworker was running approximately 24% faster as opposed to the original 4 threads we previously had.
+![embed](https://github.com/BenjaminFisher1/SoftwareEngineering/blob/main/System%20Diagram.pdf)
 

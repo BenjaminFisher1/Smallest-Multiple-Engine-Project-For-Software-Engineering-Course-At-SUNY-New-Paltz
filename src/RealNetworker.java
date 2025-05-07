@@ -40,10 +40,11 @@ public class RealNetworker implements Networker{
 		ArrayList<Long> tempList = new ArrayList<Long>();
 
         try {
-            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();
+            tempList = new ArrayList<Long>(readIntegers(request.getFileName()));	
         } catch (Exception e) {
             request.newFileName(defaultFileName); // OR use 'test' if correct
-            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();
+            tempList = new ArrayList<Long>(readIntegers(request.getFileName()));	
+
 		
         }
 		

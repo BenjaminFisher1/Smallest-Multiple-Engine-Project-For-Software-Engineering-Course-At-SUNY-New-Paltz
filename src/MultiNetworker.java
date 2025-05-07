@@ -49,10 +49,12 @@ public class MultiNetworker implements Networker{
 		
 
         try {
-            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();			//maybe revisit if clone is needed
+            tempList = new ArrayList<Long>(readIntegers(request.getFileName()));	
+		
         } catch (Exception e) {
             request.newFileName(defaultFileName); // OR use 'test' if correct
-            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();
+            tempList = new ArrayList<Long>(readIntegers(request.getFileName()));	
+
 		
         }
 		
@@ -97,10 +99,11 @@ public class MultiNetworker implements Networker{
 			
 
 	        try {
-	            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();			//maybe revisit if clone is needed
+	        	tempList = new ArrayList<Long>(readIntegers(request.getFileName()));
+	            
 	        } catch (Exception e) {
 	            request.newFileName(defaultFileName); // OR use 'test' if correct
-	            tempList = (ArrayList<Long>) readIntegers(request.getFileName()).clone();
+	            tempList = new ArrayList<Long>(readIntegers(request.getFileName()));	
 			
 	        }
 			
@@ -223,4 +226,5 @@ public class MultiNetworker implements Networker{
         }
     }
     
+  
 }

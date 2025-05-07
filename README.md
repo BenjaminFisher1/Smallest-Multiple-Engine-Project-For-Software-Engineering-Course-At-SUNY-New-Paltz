@@ -43,5 +43,5 @@ Through benchmark testing, we determined that 6 threads provide the best perform
 
 
 
-![embed](https://github.com/BenjaminFisher1/SoftwareEngineering/blob/main/System%20Diagram.pdf)
+![System Diagram](https://github.com/BenjaminFisher1/SoftwareEngineering/blob/main/System%20Diagram.pdf)
 
